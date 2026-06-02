@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color: var(--color-text);
+    background: var(--color-background);
+}
+
+.main-header{
+    background: var(--color-cream);
+    border-bottom: 1px solid rgba(74,59,49,0.06);
+}
+
+.main-header__container{
+    max-width: 1100px;
+    margin: 0 auto;
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.logo__text{
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    text-decoration: none;
+}
+
+.main-nav__list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav__link{
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 8px;
+}
+
+.main-nav__link:hover{
+    background: rgba(139,94,60,0.06);
+}
+
+.main-header__menu-toggle{
+    display: none;
+    background: var(--color-primary);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px){
+    .main-nav__list{
+        position: absolute;
+        top: var(--header-height);
+        right: 16px;
+        flex-direction: column;
+        background: var(--color-cream);
+        padding: 12px;
+        box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+        display: none;
+    }
+
+n    .main-nav--open .main-nav__list{
+        display: flex;
+    }
+
+n    .main-header__menu-toggle{
+        display: inline-block;
+    }
+}
