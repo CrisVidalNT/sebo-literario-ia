@@ -1,0 +1,34 @@
+<svg width="400" height="60" viewBox="0 0 400 60" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>NovaEstante</title>
+  <desc>Logo horizontal da NovaEstante</desc>
+
+  <!-- Ícone: livros empilhados -->
+  <rect x="0" y="13" width="7" height="36" rx="2" fill="#fff9fb"/>
+  <rect x="9"  y="8"  width="7" height="41" rx="2" fill="#f0a0bb"/>
+  <rect x="18" y="18" width="7" height="31" rx="2" fill="#fff9fb"/>
+  <rect x="27" y="11" width="7" height="38" rx="2" fill="#fce4ec"/>
+  <!-- sombra base -->
+  <rect x="0" y="48" width="34" height="3" rx="1.5" fill="#2d1f29" opacity="0.18"/>
+
+  <!-- Nome -->
+  <text
+    x="48"
+    y="35"
+    font-family="'Playfair Display', Georgia, serif"
+    font-size="28"
+    font-weight="700"
+    fill="#fff9fb"
+    letter-spacing="0.3"
+  >NovaEstante</text>
+
+  <!-- Slogan -->
+  <text
+    x="49"
+    y="50"
+    font-family="'Poppins', Arial, sans-serif"
+    font-size="8.5"
+    font-weight="400"
+    fill="#fce4ec"
+    letter-spacing="2.2"
+  >HISTÓRIAS GANHAM NOVAS VIDAS</text>
+</svg>

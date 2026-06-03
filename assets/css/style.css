@@ -10,7 +10,7 @@ body{
 }
 
 .main-header{
-    background: var(--color-cream);
+    background: var(--color-primary);
     border-bottom: 1px solid rgba(74,59,49,0.06);
 }
 
@@ -24,23 +24,17 @@ body{
     padding: 0 16px;
 }
 
-.logo__text{
-    font-weight: 700;
-    color: var(--color-primary);
-    font-size: 1.25rem;
-    text-decoration: none;
-}
-
 .main-nav__list{
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     gap: 20px;
+    font-weight: 700;
 }
 
 .main-nav__link{
-    color: var(--color-text);
+    color: var(--color-surface);
     text-decoration: none;
     padding: 8px 10px;
     border-radius: 8px;
