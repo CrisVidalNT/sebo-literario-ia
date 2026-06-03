@@ -1,251 +1,58 @@
-# Identidade Visual - NovaEstante
+# Identidade Visual — NovaEstante
 
-## Conceito da Marca
+> "Histórias ganham novas vidas."
 
-A identidade visual deve transmitir:
-
-* Aconchego
-* Amor pela leitura
-* Confiança
-* Comunidade
-* Descoberta de novas histórias
-
-A sensação desejada é a de entrar em uma livraria independente ou em um sebo acolhedor, onde cada livro possui uma história para compartilhar.
+Plataforma digital para compra, venda e troca de livros usados.
+Personalidade: **acolhedora, literária, sustentável e confiável.**
+Estética: **Cozy Literária Moderna** — a sensação de entrar em uma livraria independente onde cada livro tem uma história para contar.
 
 ---
 
-# Estilo Visual
+## Paleta de Cores
 
-## Estética
+| Papel | Nome | Hex | Uso |
+|---|---|---|---|
+| Primária | Rosa Vivo | `#d4547a` | Logo, botões, títulos, destaques |
+| Secundária | Rosa Suave | `#f0a0bb` | Cards, elementos decorativos, bordas |
+| Fundo principal | Rosa Névoa | `#fff0f5` | Seções, fundo de páginas |
+| Fundo de cards | Branco Rosado | `#fff9fb` | Cards de livros, áreas de leitura |
+| Texto principal | Vinho Escuro | `#2d1f29` | Títulos, textos corridos |
+| Texto secundário | Ameixa | `#6b4d5e` | Subtítulos, descrições, metadados |
+| Apoio | Blush | `#b83060` | CTAs secundários, badges, etiquetas |
+| Borda | Rosa Claro | `#f5c6d8` | Divisores, bordas de cards |
 
-Cozy Literária Moderna
+**Gradiente principal:** `#f9c5d1 → #d4547a` — usado em botões, logo e elementos em destaque.
+**Gradiente suave:** `#fce4ec → #f8bbd0 → #f48fb1` — usado em fundos de seção e capas decorativas.
 
-Inspirada em:
+---
 
-* Livrarias independentes
-* Sebos tradicionais
-* Bibliotecas aconchegantes
-* Papel envelhecido
-* Estantes de madeira
-* Café e leitura
+## Tipografia
+
+**Títulos:** Playfair Display ou Cormorant Garamond — elegante, literária, sofisticada.
+**Textos:** Poppins ou Nunito Sans — moderna, legível, responsiva.
+
+---
+
+## Componentes
+
+### Botão principal
+- Fundo: gradiente `#f9c5d1 → #d4547a`
+- Texto: `#ffffff`
+- Radius: `8px`
+- Hover: `#b83060`
+
+### Card de livro
+- Fundo: `#fff9fb`
+- Borda: `1px solid #f5c6d8`
+- Radius: `16px`
+- Sombra: `rgba(212, 84, 122, 0.10)` suave
+- Conteúdo: capa · título · autor · gênero · estado · preço
 
 ---
 
 ## Elementos Visuais
 
-Utilizar:
+**Usar:** livros empilhados, estantes, marcadores de página, folhas delicadas, ícones minimalistas, ilustrações suaves.
+**Evitar:** visual corporativo, cores vibrantes, elementos futuristas, excesso de sombras, bordas exageradamente arredondadas.
 
-* Livros empilhados
-* Estantes
-* Marcadores de página
-* Folhas e galhos delicados
-* Ícones minimalistas
-* Ilustrações suaves
-
-Evitar:
-
-* Visual corporativo excessivo
-* Cores vibrantes demais
-* Elementos futuristas
-* Excesso de sombras
-* Bordas muito arredondadas
-
----
-
-# Paleta de Cores
-
-## Cor Primária
-
-Marrom Canela
-
-Hex: #8B5E3C
-
-Uso:
-
-* Logo
-* Botões principais
-* Títulos
-
----
-
-## Cor Secundária
-
-Rosa Chá
-
-Hex: #D8B4A0
-
-Uso:
-
-* Destaques
-* Cards
-* Elementos decorativos
-
----
-
-## Cor de Apoio
-
-Bege Papel
-
-Hex: #F5EBDD
-
-Uso:
-
-* Fundo principal
-* Seções
-
----
-
-## Cor Complementar
-
-Verde Sálvia
-
-Hex: #A3B18A
-
-Uso:
-
-* Indicadores de sustentabilidade
-* Etiquetas
-* Elementos secundários
-
----
-
-## Cor Escura
-
-Marrom Café
-
-Hex: #4A3B31
-
-Uso:
-
-* Textos
-* Ícones
-* Rodapé
-
----
-
-## Cor Clara
-
-Creme
-
-Hex: #FFF9F2
-
-Uso:
-
-* Fundo de cards
-* Áreas de leitura
-
----
-
-# Tipografia
-
-## Títulos
-
-Fonte:
-
-* Playfair Display
-  ou
-* Cormorant Garamond
-
-Características:
-
-* Elegante
-* Literária
-* Sofisticada
-
----
-
-## Textos
-
-Fonte:
-
-* Poppins
-  ou
-* Nunito Sans
-
-Características:
-
-* Moderna
-* Fácil leitura
-* Boa responsividade
-
----
-
-# Componentes
-
-## Botões
-
-Cor:
-#8B5E3C
-
-Texto:
-#FFFFFF
-
-Bordas:
-8px
-
-Hover:
-#A86B3D
-
----
-
-## Cards de Livros
-
-Fundo:
-#FFF9F2
-
-Borda:
-1px solid #E8DCCF
-
-Radius:
-16px
-
-Sombra:
-Suave e discreta
-
-Conteúdo:
-
-* Capa do livro
-* Nome
-* Autor
-* Gênero
-* Estado
-* Preço
-
----
-
-# Estilo das Imagens
-
-As imagens devem transmitir:
-
-* Leitura
-* Compartilhamento
-* Conforto
-* Sustentabilidade
-
-Preferências:
-
-* Iluminação quente
-* Tons naturais
-* Livros reais
-* Ambientes acolhedores
-
----
-
-# Resumo da Marca
-
-Nome: NovaEstante
-
-Slogan:
-"Histórias ganham novas vidas."
-
-Posicionamento:
-Plataforma digital para compra, venda e troca de livros usados.
-
-Personalidade:
-Acolhedora, literária, sustentável e confiável.
-
-Estilo:
-Cozy Literário Moderno.
-
-Paleta:
-Marrom Canela, Rosa Chá, Bege Papel, Verde Sálvia e Creme.
+**Imagens:** iluminação quente, tons naturais rosados, livros reais, ambientes aconchegantes.
