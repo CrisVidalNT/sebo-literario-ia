@@ -130,8 +130,334 @@
                     })();
                 </script>
             </section>
+        
 
         </main>
+
+            <section id="livros" aria-labelledby="livros-title">
+                <div class="livros__container">
+                    <h2 id="livros-title" class="livros__title">Livros — Histórias ganham novas vidas</h2>
+
+                    <div class="livros__controls">
+                        <div class="search">
+                            <label for="livros-search" class="visually-hidden">Buscar por título ou autor</label>
+                            <input id="livros-search" type="search" placeholder="Buscar por título ou autor..." />
+                        </div>
+
+                        <div class="filters" role="toolbar" aria-label="Filtro por gênero">
+                            <button class="chip" data-genre="All">Todos</button>
+                            <button class="chip" data-genre="Romance">Romance</button>
+                            <button class="chip" data-genre="Fantasia">Fantasia</button>
+                            <button class="chip" data-genre="Ficção Científica">Ficção Científica</button>
+                            <button class="chip" data-genre="Suspense">Suspense</button>
+                            <button class="chip" data-genre="Terror">Terror</button>
+                            <button class="chip" data-genre="Desenvolvimento Pessoal">Desenvolvimento Pessoal</button>
+                            <button class="chip" data-genre="Acadêmicos">Acadêmicos</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog" id="catalog" aria-live="polite">
+                        <!-- 8 example cards -->
+                        <article class="book-card" data-title="O Jardim Secreto" data-author="Frances Hodgson" data-genre="Romance" data-condition="Excelente">
+                            <div class="cover" aria-hidden="true">
+                                <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#fbe9f1"/>
+                                            <stop offset="1" stop-color="#f9c5d1"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="100%" height="100%" rx="6" fill="url(#g1)" />
+                                    <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
+                                </svg>
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">O Jardim Secreto</h3>
+                                <p class="book__author">Frances Hodgson</p>
+                                <p class="book__info">Romance · Excelente</p>
+                                <div class="book__meta">
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                    <strong class="price">R$ 29,90</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Noite Estelar" data-author="A. N. Silva" data-genre="Fantasia" data-condition="Muito Bom">
+                            <div class="cover">
+                                <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#f3eaf9"/>
+                                            <stop offset="1" stop-color="#e3c3f0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="100%" height="100%" rx="6" fill="url(#g2)" />
+                                    <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
+                                </svg>
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Noite Estelar</h3>
+                                <p class="book__author">A. N. Silva</p>
+                                <p class="book__info">Fantasia · Muito Bom</p>
+                                <div class="book__meta">
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                    <strong class="price">R$ 34,50</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Máquinas do Amanhã" data-author="R. Tavares" data-genre="Ficção Científica" data-condition="Bom">
+                            <div class="cover">
+                                <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="g3" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#eef9fb"/>
+                                            <stop offset="1" stop-color="#d3eff4"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="100%" height="100%" rx="6" fill="url(#g3)" />
+                                    <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
+                                </svg>
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Máquinas do Amanhã</h3>
+                                <p class="book__author">R. Tavares</p>
+                                <p class="book__info">Ficção Científica · Bom</p>
+                                <div class="book__meta">
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                    <strong class="price">R$ 24,00</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Segredos do Velho Castelo" data-author="L. Pereira" data-genre="Suspense" data-condition="Regular">
+                            <div class="cover">
+                                <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="g4" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#fff6ea"/>
+                                            <stop offset="1" stop-color="#fbe7d0"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="100%" height="100%" rx="6" fill="url(#g4)" />
+                                    <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
+                                </svg>
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Segredos do Velho Castelo</h3>
+                                <p class="book__author">L. Pereira</p>
+                                <p class="book__info">Suspense · Regular</p>
+                                <div class="book__meta">
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                    <strong class="price">R$ 18,00</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Sombras e Sussurros" data-author="M. Almeida" data-genre="Terror" data-condition="Muito Bom">
+                            <div class="cover">
+                                <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="g5" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#fff5f6"/>
+                                            <stop offset="1" stop-color="#ffdfe6"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="100%" height="100%" rx="6" fill="url(#g5)" />
+                                    <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
+                                </svg>
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Sombras e Sussurros</h3>
+                                <p class="book__author">M. Almeida</p>
+                                <p class="book__info">Terror · Muito Bom</p>
+                                <div class="book__meta">
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                    <strong class="price">R$ 22,50</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Hábitos para Viver Melhor" data-author="C. Rodrigues" data-genre="Desenvolvimento Pessoal" data-condition="Excelente">
+                            <div class="cover">
+                                <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="g6" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#f0fbf6"/>
+                                            <stop offset="1" stop-color="#dff3e8"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="100%" height="100%" rx="6" fill="url(#g6)" />
+                                    <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
+                                </svg>
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Hábitos para Viver Melhor</h3>
+                                <p class="book__author">C. Rodrigues</p>
+                                <p class="book__info">Desenvolvimento Pessoal · Excelente</p>
+                                <div class="book__meta">
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                    <strong class="price">R$ 39,90</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Matemática Essencial" data-author="Prof. A. Nunes" data-genre="Acadêmicos" data-condition="Bom">
+                            <div class="cover">
+                                <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="g7" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#f5f9ff"/>
+                                            <stop offset="1" stop-color="#e6f0ff"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="100%" height="100%" rx="6" fill="url(#g7)" />
+                                    <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
+                                </svg>
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Matemática Essencial</h3>
+                                <p class="book__author">Prof. A. Nunes</p>
+                                <p class="book__info">Acadêmicos · Bom</p>
+                                <div class="book__meta">
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                    <strong class="price">R$ 45,00</strong>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Rumo às Estrelas" data-author="E. Castro" data-genre="Ficção Científica" data-condition="Excelente">
+                            <div class="cover">
+                                <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                                    <defs>
+                                        <linearGradient id="g8" x1="0" x2="1" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#f0f7ff"/>
+                                            <stop offset="1" stop-color="#d3e9ff"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect width="100%" height="100%" rx="6" fill="url(#g8)" />
+                                    <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
+                                </svg>
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Rumo às Estrelas</h3>
+                                <p class="book__author">E. Castro</p>
+                                <p class="book__info">Ficção Científica · Excelente</p>
+                                <div class="book__meta">
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                    <strong class="price">R$ 31,00</strong>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <style>
+                    #livros{padding:64px 20px;background:linear-gradient(180deg,#fff0f5 0%,#fff 100%)}
+                    .livros__container{max-width:1200px;margin:0 auto}
+                    .livros__title{font-size:1.75rem;margin-bottom:18px;color:var(--text,#2d1f29)}
+                    .livros__controls{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
+                    .search input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #f5c6d8;background:#fff9fb}
+                    .filters{display:flex;gap:8px;flex-wrap:wrap}
+                    .chip{background:transparent;border:1px solid #f5c6d8;padding:8px 12px;border-radius:999px;cursor:pointer;color:var(--text-secondary,#6b4d5e)}
+                    .chip.active{background:linear-gradient(90deg,#f9c5d1,#d4547a);color:#fff;border-color:transparent}
+
+                    .catalog{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+                    .book-card{display:flex;flex-direction:column;border-radius:16px;border:1px solid #f5c6d8;background:#fff9fb;box-shadow:0 8px 24px rgba(212,84,122,0.10);overflow:hidden;transform:translateY(12px);opacity:0;transition:transform .45s ease,opacity .45s ease,box-shadow .2s ease;min-height:100%}
+                    .book-card.show{opacity:1;transform:none}
+                    .book-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(212,84,122,0.14)}
+                    .cover{display:block;background:linear-gradient(135deg,#fce4ec,#f8bbd0);min-height:260px}
+                    .cover svg{width:100%;height:100%;display:block}
+                    .book__body{padding:14px;display:flex;flex-direction:column;justify-content:flex-start;gap:10px}
+                    .book__title{margin:0;font-size:1.05rem;color:var(--text,#2d1f29)}
+                    .book__author{margin:0;color:var(--text-secondary,#6b4d5e);font-size:.95rem}
+                    .book__info{color:var(--text-secondary,#6b4d5e);font-size:.9rem;line-height:1.5;letter-spacing:.01em}
+                    .book__meta{display:flex;flex-direction:column;gap:10px;margin-top:6px}
+                    .price{color:var(--text,#2d1f29);font-size:1.05rem;font-weight:700}
+                    .actions{display:flex;gap:14px;flex-wrap:wrap}
+                    .text-link{background:transparent;border:none;color:#d4547a;text-decoration:none;font-weight:600;padding:0;cursor:pointer}
+                    .text-link:hover{text-decoration:underline}
+
+                    @media(min-width:1000px){
+                        .catalog{grid-template-columns:repeat(4,1fr)}
+                    }
+                </style>
+
+                <script>
+                    (function(){
+                        const search = document.getElementById('livros-search');
+                        const chips = Array.from(document.querySelectorAll('#livros .chip'));
+                        const cards = Array.from(document.querySelectorAll('#livros .book-card'));
+
+                        function filter(){
+                            const q = (search.value||'').trim().toLowerCase();
+                            const active = chips.find(c=>c.classList.contains('active'));
+                            const genre = active? active.dataset.genre : 'All';
+
+                            let visibleIndex = 0;
+                            cards.forEach((card)=>{
+                                const title = card.dataset.title.toLowerCase();
+                                const author = card.dataset.author.toLowerCase();
+                                const cardGenre = card.dataset.genre;
+                                const matchesQ = q === '' || title.includes(q) || author.includes(q);
+                                const matchesGenre = (genre === 'All') || (cardGenre === genre);
+                                if(matchesQ && matchesGenre){
+                                    card.style.display = '';
+                                    // staggered reveal
+                                    setTimeout(()=>card.classList.add('show'), visibleIndex * 80);
+                                    visibleIndex++;
+                                } else {
+                                    card.style.display = 'none';
+                                    card.classList.remove('show');
+                                }
+                            });
+                        }
+
+                        // default: select 'All'
+                        chips.forEach(c=>{
+                            c.addEventListener('click', ()=>{
+                                chips.forEach(x=>x.classList.remove('active'));
+                                c.classList.add('active');
+                                filter();
+                            });
+                        });
+                        // set initial active
+                        const allChip = chips.find(c=>c.dataset.genre==='All');
+                        if(allChip) allChip.classList.add('active');
+
+                        search.addEventListener('input', ()=>filter());
+
+                        // initial reveal on load
+                        window.addEventListener('load', ()=>{
+                            cards.forEach((card,i)=>setTimeout(()=>card.classList.add('show'), i*80));
+                        });
+                    })();
+                </script>
+            </section>
 
         <script src="assets/js/main.js"></script>
     </body>
