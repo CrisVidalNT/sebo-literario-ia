@@ -17,10 +17,10 @@
                 <nav class="main-nav" aria-label="Menu principal">
                     <ul class="main-nav__list">
                         <li class="main-nav__item"><a href="#" class="main-nav__link">Início</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Sobre</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Livros</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Trocas</a></li>
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Contato</a></li>
+                        <li class="main-nav__item"><a href="#sobre" class="main-nav__link">Sobre</a></li>
+                        <li class="main-nav__item"><a href="#livros" class="main-nav__link">Livros</a></li>
+                        <li class="main-nav__item"><a href="#trocas" class="main-nav__link">Trocas</a></li>
+                        <li class="main-nav__item"><a href="#contato" class="main-nav__link">Contato</a></li>
                     </ul>
                 </nav>
                 
@@ -99,9 +99,6 @@
                 </div>
 
             </section>
-        
-
-        </main>
 
             <section id="livros" aria-labelledby="livros-title">
                 <div class="livros__container">
@@ -346,6 +343,201 @@
                 </div>
 
             </section>
+
+            <section id="trocas" aria-labelledby="trocas-title" class="section-spacing">
+                <div class="trocas__container">
+                    <div class="section-header">
+                        <span class="section-badge">🔁</span>
+                        <div>
+                            <h2 id="trocas-title">Trocas</h2>
+                            <p class="section-lead">Solicitações simuladas mostram como cada troca é acompanhada no NovaEstante.</p>
+                        </div>
+                    </div>
+
+                    <div class="trocas__grid">
+                        <div class="trocas__panel-card card">
+                            <h3>Como funciona a troca</h3>
+                            <ol>
+                                <li><strong>Passo 1:</strong> Encontre um livro disponível para troca no catálogo.</li>
+                                <li><strong>Passo 2:</strong> Envie a solicitação ao proprietário.</li>
+                                <li><strong>Passo 3:</strong> Aguarde a resposta do outro usuário.</li>
+                                <li><strong>Passo 4:</strong> Combinem os detalhes e realizem a troca.</li>
+                            </ol>
+                        </div>
+                        <div class="trocas__panel-card card">
+                            <h3>Regras de negociação</h3>
+                            <ul>
+                                <li>Apenas usuários cadastrados podem solicitar trocas.</li>
+                                <li>O proprietário pode aceitar, recusar ou aguardar.</li>
+                                <li>O solicitante pode cancelar antes da aceitação.</li>
+                                <li>Ambos os livros devem estar cadastrados no sistema.</li>
+                                <li>A plataforma não intermedia a entrega física.</li>
+                                <li>Trocas combinadas fora da plataforma são de responsabilidade dos usuários.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="trocas__panel">
+                        <div class="trocas__toolbar">
+                            <strong>Filtrar por status</strong>
+                            <div class="trocas__tabs" role="tablist" aria-label="Filtrar solicitações">
+                                <button class="trocas__tab active" data-status="all" type="button">Todas</button>
+                                <button class="trocas__tab" data-status="Pendente" type="button">Pendentes</button>
+                                <button class="trocas__tab" data-status="Aceita" type="button">Aceitas</button>
+                                <button class="trocas__tab" data-status="Recusada" type="button">Recusadas</button>
+                                <button class="trocas__tab" data-status="Cancelada" type="button">Canceladas</button>
+                            </div>
+                        </div>
+
+                        <div class="trocas__cards">
+                            <article class="troca-card status-pendente" data-status="Pendente">
+                                <div class="troca-card__header">
+                                    <span class="troca-card__badge">Pendente</span>
+                                    <time datetime="2026-06-03">03 jun 2026</time>
+                                </div>
+                                <div class="troca-card__body">
+                                    <div>
+                                        <p class="troca-card__label">Livro oferecido</p>
+                                        <strong>O Jardim Secreto</strong>
+                                        <p class="troca-card__meta">Frances Hodgson</p>
+                                    </div>
+                                    <div>
+                                        <p class="troca-card__label">Livro desejado</p>
+                                        <strong>Segredos do Velho Castelo</strong>
+                                        <p class="troca-card__meta">L. Pereira</p>
+                                    </div>
+                                    <p class="troca-card__user">Solicitação por <strong>Ana Silva</strong></p>
+                                </div>
+                                <div class="troca-card__actions">
+                                    <button class="button button--secondary troca-action" data-action="aceitar" type="button">Aceitar</button>
+                                    <button class="button button--secondary troca-action" data-action="recusar" type="button">Recusar</button>
+                                </div>
+                            </article>
+
+                            <article class="troca-card status-aceita" data-status="Aceita">
+                                <div class="troca-card__header">
+                                    <span class="troca-card__badge">Aceita</span>
+                                    <time datetime="2026-06-01">01 jun 2026</time>
+                                </div>
+                                <div class="troca-card__body">
+                                    <div>
+                                        <p class="troca-card__label">Livro oferecido</p>
+                                        <strong>Noite Estelar</strong>
+                                        <p class="troca-card__meta">A. N. Silva</p>
+                                    </div>
+                                    <div>
+                                        <p class="troca-card__label">Livro desejado</p>
+                                        <strong>Máquinas do Amanhã</strong>
+                                        <p class="troca-card__meta">R. Tavares</p>
+                                    </div>
+                                    <p class="troca-card__user">Solicitação por <strong>Bruno Costa</strong></p>
+                                </div>
+                                <div class="troca-card__actions">
+                                    <button class="button button--secondary troca-action" data-action="detalhes" type="button">Ver detalhes</button>
+                                </div>
+                            </article>
+
+                            <article class="troca-card status-recusada" data-status="Recusada">
+                                <div class="troca-card__header">
+                                    <span class="troca-card__badge">Recusada</span>
+                                    <time datetime="2026-05-29">29 mai 2026</time>
+                                </div>
+                                <div class="troca-card__body">
+                                    <div>
+                                        <p class="troca-card__label">Livro oferecido</p>
+                                        <strong>Sombras e Sussurros</strong>
+                                        <p class="troca-card__meta">M. Almeida</p>
+                                    </div>
+                                    <div>
+                                        <p class="troca-card__label">Livro desejado</p>
+                                        <strong>Hábitos para Viver Melhor</strong>
+                                        <p class="troca-card__meta">C. Rodrigues</p>
+                                    </div>
+                                    <p class="troca-card__user">Solicitação por <strong>Carla Mendes</strong></p>
+                                </div>
+                                <div class="troca-card__actions">
+                                    <button class="button button--secondary troca-action" data-action="nova" type="button">Nova solicitação</button>
+                                </div>
+                            </article>
+
+                            <article class="troca-card status-cancelada" data-status="Cancelada">
+                                <div class="troca-card__header">
+                                    <span class="troca-card__badge">Cancelada</span>
+                                    <time datetime="2026-05-27">27 mai 2026</time>
+                                </div>
+                                <div class="troca-card__body">
+                                    <div>
+                                        <p class="troca-card__label">Livro oferecido</p>
+                                        <strong>Matemática Essencial</strong>
+                                        <p class="troca-card__meta">Prof. A. Nunes</p>
+                                    </div>
+                                    <div>
+                                        <p class="troca-card__label">Livro desejado</p>
+                                        <strong>Rumo às Estrelas</strong>
+                                        <p class="troca-card__meta">E. Castro</p>
+                                    </div>
+                                    <p class="troca-card__user">Solicitação por <strong>Diego Alves</strong></p>
+                                </div>
+                                <div class="troca-card__actions">
+                                    <button class="button button--secondary troca-action" data-action="nova" type="button">Nova solicitação</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <section id="contato" aria-labelledby="contato-title" class="footer__section">
+                <div class="contact__container">
+                    <div class="section-header">
+                        <span class="section-badge">📬</span>
+                        <div>
+                            <h2 id="contato-title">Fale com a NovaEstante</h2>
+                            <p class="section-lead">Entre em contato para dúvidas, cadastro ou sugestões. Estamos aqui para ajudar sua próxima leitura a ganhar novas vidas.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__layout">
+                        <div class="contact__info card">
+                            <h3>Precisa falar conosco?</h3>
+                            <p>Envie uma mensagem ou use nossos canais de atendimento.</p>
+                            <ul class="contact__details">
+                                <li><strong>Email:</strong> contato@novaestante.com</li>
+                                <li><strong>Telefone:</strong> (11) 4002-8922</li>
+                                <li><strong>Endereço:</strong> Av. das Letras, 1234 - São Paulo, SP</li>
+                            </ul>
+                        </div>
+                        <form id="contact-form" class="contact__form card">
+                            <label for="contact-name">Nome</label>
+                            <input id="contact-name" type="text" placeholder="Seu nome" required />
+                            <label for="contact-email">Email</label>
+                            <input id="contact-email" type="email" placeholder="seu@email.com" required />
+                            <label for="contact-message">Mensagem</label>
+                            <textarea id="contact-message" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                            <button class="button button--primary" type="submit">Enviar mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <div class="footer__divider"></div>
+
+            <div class="footer__wrap">
+                <div class="footer-brand">
+                    <img src="./assets/images/novaestante-logo.svg" alt="NovaEstante" height="48" />
+                    <p class="footer__tagline">Histórias ganham novas vidas.</p>
+                </div>
+                <div class="footer__links">
+                    <a href="#sobre">Sobre</a>
+                    <a href="#livros">Livros</a>
+                    <a href="#trocas">Trocas</a>
+                    <a href="#contato">Contato</a>
+                </div>
+                <div class="footer__copy">© 2026 NovaEstante. Todos os direitos reservados.</div>
+            </div>
+        </footer>
 
         <script src="assets/js/main.js"></script>
     </body>

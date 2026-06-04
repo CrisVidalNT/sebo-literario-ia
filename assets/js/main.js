@@ -66,4 +66,87 @@ document.addEventListener('DOMContentLoaded', function(){
             cards.forEach((card, index) => setTimeout(() => card.classList.add('show'), index * 80));
         });
     }
+
+    const trocasTabs = Array.from(document.querySelectorAll('.trocas__tab'));
+    const trocaCards = Array.from(document.querySelectorAll('.troca-card'));
+    const trocaActions = Array.from(document.querySelectorAll('.troca-action'));
+
+    const statusClasses = {
+        'Pendente': 'status-pendente',
+        'Aceita': 'status-aceita',
+        'Recusada': 'status-recusada',
+        'Cancelada': 'status-cancelada'
+    };
+
+    const updateStatus = (card, status) => {
+        card.dataset.status = status;
+        Object.values(statusClasses).forEach(cls => card.classList.remove(cls));
+        card.classList.add(statusClasses[status]);
+        const badge = card.querySelector('.troca-card__badge');
+        if(badge) badge.textContent = status;
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(14px)';
+        setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'none';
+        }, 50);
+    };
+
+    const filterTrocas = () => {
+        const activeTab = trocasTabs.find(tab => tab.classList.contains('active'));
+        const filter = activeTab ? activeTab.dataset.status : 'all';
+        trocaCards.forEach(card => {
+            const status = card.dataset.status;
+            const visible = filter === 'all' || status === filter;
+            card.style.display = visible ? '' : 'none';
+        });
+    };
+
+    if(trocasTabs.length && trocaCards.length){
+        trocasTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                trocasTabs.forEach(item => item.classList.remove('active'));
+                tab.classList.add('active');
+                filterTrocas();
+            });
+        });
+
+        trocaActions.forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.troca-card');
+                if(!card) return;
+                const action = button.dataset.action;
+                if(action === 'aceitar') updateStatus(card, 'Aceita');
+                if(action === 'recusar') updateStatus(card, 'Recusada');
+                if(action === 'cancelar') updateStatus(card, 'Cancelada');
+                if(action === 'nova') updateStatus(card, 'Pendente');
+                if(action === 'detalhes') {
+                    card.classList.add('highlight');
+                    setTimeout(() => card.classList.remove('highlight'), 450);
+                }
+                filterTrocas();
+            });
+        });
+
+        filterTrocas();
+    }
+
+    const contactForm = document.getElementById('contact-form');
+    if(contactForm){
+        contactForm.addEventListener('submit', event => {
+            event.preventDefault();
+            const button = contactForm.querySelector('button[type="submit"]');
+            if(button) {
+                button.textContent = 'Mensagem enviada!';
+                button.disabled = true;
+            }
+            setTimeout(() => {
+                if(button) {
+                    button.textContent = 'Enviar mensagem';
+                    button.disabled = false;
+                }
+                contactForm.reset();
+            }, 1800);
+        });
+    }
 });
