@@ -27,8 +27,6 @@
             </div>
         </header>
 
-
-
         <main>
             <section class="hero">
                 <div class="hero__content">
@@ -100,35 +98,6 @@
                     </div>
                 </div>
 
-                <style>
-                    #sobre{padding:64px 20px;background:var(--bg-paper,#fff0f5);color:var(--text,#2d1f29)}
-                    .sobre__container{max-width:1100px;margin:0 auto}
-                    .sobre__title{font-size:2rem;margin-bottom:12px;background:linear-gradient(90deg,#f9c5d1,#d4547a);-webkit-background-clip:text;background-clip:text;color:transparent}
-                    .sobre__intro{margin-bottom:20px;font-size:1rem;color:var(--text-secondary,#6b4d5e)}
-
-                    /* Cards side-by-side */
-                    .sobre__cards{display:flex;gap:18px;flex-wrap:wrap;align-items:stretch}
-                    .sobre__card{flex:1 1 220px;min-width:220px;max-width:360px;background:#fff9fb;border:1px solid #f5c6d8;border-radius:12px;padding:20px;box-shadow:0 8px 24px rgba(212,84,122,0.06)}
-                    .card__icon{font-size:28px;margin-bottom:8px}
-
-                    /* Scroll reveal */
-                    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
-                    .reveal.in-view{opacity:1;transform:none}
-
-                    @media(max-width:599px){
-                        .sobre__cards{flex-direction:column}
-                        .sobre__card{max-width:100%}
-                    }
-                </style>
-
-                <script>
-                    (function(){
-                        const io = new IntersectionObserver((entries)=>{
-                            entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}})
-                        },{threshold:0.15});
-                        document.querySelectorAll('#sobre .reveal').forEach(el=>io.observe(el));
-                    })();
-                </script>
             </section>
         
 
@@ -376,87 +345,6 @@
                     </div>
                 </div>
 
-                <style>
-                    #livros{padding:64px 20px;background:linear-gradient(180deg,#fff0f5 0%,#fff 100%)}
-                    .livros__container{max-width:1200px;margin:0 auto}
-                    .livros__title{font-size:1.75rem;margin-bottom:18px;color:var(--text,#2d1f29)}
-                    .livros__controls{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
-                    .search input{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #f5c6d8;background:#fff9fb}
-                    .filters{display:flex;gap:8px;flex-wrap:wrap}
-                    .chip{background:transparent;border:1px solid #f5c6d8;padding:8px 12px;border-radius:999px;cursor:pointer;color:var(--text-secondary,#6b4d5e)}
-                    .chip.active{background:linear-gradient(90deg,#f9c5d1,#d4547a);color:#fff;border-color:transparent}
-
-                    .catalog{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-                    .book-card{display:flex;flex-direction:column;border-radius:16px;border:1px solid #f5c6d8;background:#fff9fb;box-shadow:0 8px 24px rgba(212,84,122,0.10);overflow:hidden;transform:translateY(12px);opacity:0;transition:transform .45s ease,opacity .45s ease,box-shadow .2s ease;min-height:100%}
-                    .book-card.show{opacity:1;transform:none}
-                    .book-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(212,84,122,0.14)}
-                    .cover{display:block;background:linear-gradient(135deg,#fce4ec,#f8bbd0);min-height:200px}
-                    .cover svg{width:100%;height:100%;display:block}
-                    .book__body{padding:12px 14px;display:flex;flex-direction:column;justify-content:flex-start;gap:8px}
-                    .book__title{margin:0;font-size:1.05rem;color:var(--text,#2d1f29)}
-                    .book__author{margin:0;color:var(--text-secondary,#6b4d5e);font-size:.95rem}
-                    .book__info{color:var(--text-secondary,#6b4d5e);font-size:.9rem;line-height:1.5;letter-spacing:.01em}
-                    .book__meta{display:flex;flex-direction:column;gap:10px;margin-top:6px}
-                    .price{color:var(--text,#2d1f29);font-size:1.05rem;font-weight:700}
-                    .actions{display:flex;gap:14px;flex-wrap:wrap}
-                    .text-link{background:transparent;border:none;color:#d4547a;text-decoration:none;font-weight:600;padding:0;cursor:pointer}
-                    .text-link:hover{text-decoration:underline}
-
-                    @media(min-width:1000px){
-                        .catalog{grid-template-columns:repeat(4,1fr)}
-                    }
-                </style>
-
-                <script>
-                    (function(){
-                        const search = document.getElementById('livros-search');
-                        const chips = Array.from(document.querySelectorAll('#livros .chip'));
-                        const cards = Array.from(document.querySelectorAll('#livros .book-card'));
-
-                        function filter(){
-                            const q = (search.value||'').trim().toLowerCase();
-                            const active = chips.find(c=>c.classList.contains('active'));
-                            const genre = active? active.dataset.genre : 'All';
-
-                            let visibleIndex = 0;
-                            cards.forEach((card)=>{
-                                const title = card.dataset.title.toLowerCase();
-                                const author = card.dataset.author.toLowerCase();
-                                const cardGenre = card.dataset.genre;
-                                const matchesQ = q === '' || title.includes(q) || author.includes(q);
-                                const matchesGenre = (genre === 'All') || (cardGenre === genre);
-                                if(matchesQ && matchesGenre){
-                                    card.style.display = '';
-                                    // staggered reveal
-                                    setTimeout(()=>card.classList.add('show'), visibleIndex * 80);
-                                    visibleIndex++;
-                                } else {
-                                    card.style.display = 'none';
-                                    card.classList.remove('show');
-                                }
-                            });
-                        }
-
-                        // default: select 'All'
-                        chips.forEach(c=>{
-                            c.addEventListener('click', ()=>{
-                                chips.forEach(x=>x.classList.remove('active'));
-                                c.classList.add('active');
-                                filter();
-                            });
-                        });
-                        // set initial active
-                        const allChip = chips.find(c=>c.dataset.genre==='All');
-                        if(allChip) allChip.classList.add('active');
-
-                        search.addEventListener('input', ()=>filter());
-
-                        // initial reveal on load
-                        window.addEventListener('load', ()=>{
-                            cards.forEach((card,i)=>setTimeout(()=>card.classList.add('show'), i*80));
-                        });
-                    })();
-                </script>
             </section>
 
         <script src="assets/js/main.js"></script>
