@@ -1,16 +1,57 @@
 :root {
-    --color-primary: #d4547a;
-    --color-secondary: #f0a0bb;
-    --color-background: #fff0f5;
-    --color-surface: #fff9fb;
-    --color-text: #2d1f29;
-    --color-muted: #6b4d5e;
-    --color-support: #b83060;
-    --color-border: #f5c6d8;
-    --gradient-primary: linear-gradient(135deg, #f9c5d1 0%, #d4547a 100%);
-    --gradient-soft: linear-gradient(180deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
-    --border-radius: 16px;
-    --header-height: 72px;
-    --max-width: 1120px;
-    --shadow-soft: 0 18px 45px rgba(212, 84, 122, 0.10);
+    /* Cores */
+    --color-primary:     #d4547a;
+    --color-secondary:   #f0a0bb;
+    --color-support:     #b83060;
+    --color-background:  #fff0f5;
+    --color-surface:     #fff9fb;
+    --color-text:        #2d1f29;
+    --color-muted:       #6b4d5e;
+    --color-border:      #f5c6d8;
+
+    /* Gradientes */
+    --gradient-primary:  linear-gradient(135deg, #f9c5d1 0%, #d4547a 100%);
+    --gradient-soft:     linear-gradient(180deg, #fce4ec 0%, #f8bbd0 50%, #f48fb1 100%);
+    --gradient-section:  linear-gradient(180deg, #fff0f5 0%, #fff 100%);
+
+    /* Tipografia */
+    --font-heading: 'Playfair Display', Georgia, serif;
+    --font-body:    'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+    /* Espaçamento — escala de 8px */
+    --space-1:   8px;
+    --space-2:   16px;
+    --space-3:   24px;
+    --space-4:   32px;
+    --space-5:   40px;
+    --space-6:   48px;
+    --space-8:   64px;
+    --space-10:  80px;
+    --space-12:  96px;
+
+    /* Layout */
+    --max-width:        1100px;
+    --header-height:    72px;
+
+    /* Raios — sem exagero */
+    --radius-sm:   6px;
+    --radius-md:   10px;
+    --radius-lg:   14px;
+    --radius-pill: 999px;
+
+    /* Sombras */
+    --shadow-sm:   0 2px 8px rgba(212, 84, 122, 0.08);
+    --shadow-md:   0 8px 24px rgba(212, 84, 122, 0.10);
+    --shadow-lg:   0 16px 40px rgba(212, 84, 122, 0.13);
+
+    /* Escala tipográfica */
+    --font-size-xs:      0.8rem;
+    --font-size-sm:      0.9rem;
+    --font-size-base:    1rem;
+    --font-size-md:      1.05rem;
+    --font-size-lg:      1.2rem;
+    --font-size-xl:      1.5rem;
+    --font-size-2xl:     1.875rem;
+    --font-size-3xl:     2.25rem;
+    --font-size-display: clamp(2.5rem, 4.5vw, 4rem);
 }

@@ -3,43 +3,52 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>NovaEstante</title>
+        <title>NovaEstante — Histórias ganham novas vidas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/variables.css">
         <link rel="stylesheet" href="assets/css/style.css">
     </head>
     <body>
+
+        <!-- ==================== HEADER ==================== -->
         <header class="main-header">
             <div class="main-header__container">
                 <a href="/" class="logo">
-                  <img src="./assets/images/novaestante-logo.svg" alt="NovaEstante" height="60" />
+                    <img src="./assets/images/novaestante-logo.svg" alt="NovaEstante" height="52" />
                 </a>
 
                 <nav class="main-nav" aria-label="Menu principal">
                     <ul class="main-nav__list">
-                        <li class="main-nav__item"><a href="#" class="main-nav__link">Início</a></li>
-                        <li class="main-nav__item"><a href="#sobre" class="main-nav__link">Sobre</a></li>
-                        <li class="main-nav__item"><a href="#livros" class="main-nav__link">Livros</a></li>
-                        <li class="main-nav__item"><a href="#trocas" class="main-nav__link">Trocas</a></li>
+                        <li class="main-nav__item"><a href="#"        class="main-nav__link">Início</a></li>
+                        <li class="main-nav__item"><a href="#sobre"   class="main-nav__link">Sobre</a></li>
+                        <li class="main-nav__item"><a href="#livros"  class="main-nav__link">Livros</a></li>
+                        <li class="main-nav__item"><a href="#trocas"  class="main-nav__link">Trocas</a></li>
                         <li class="main-nav__item"><a href="#contato" class="main-nav__link">Contato</a></li>
+                        <li class="main-nav__item"><a href="#cadastro" class="button button--primary" style="padding: 8px 16px; font-size: 0.85rem;">Cadastrar</a></li>
                     </ul>
                 </nav>
-                
+
+                <button class="main-header__menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
             </div>
         </header>
 
         <main>
-            <section class="hero">
+
+            <!-- ==================== HERO ==================== -->
+            <section class="hero" aria-labelledby="hero-title">
                 <div class="hero__content">
                     <span class="hero__badge">📚 Sebo Literário Online</span>
-                    <h1 class="hero__title">
-                        Compre, Venda e Troque<br>
+                    <h1 class="hero__title" id="hero-title">
+                        Compre, Venda e Troque
                         <strong>Livros Usados</strong>
                     </h1>
                     <p class="hero__description">Encontre livros usados em ótimo estado, venda exemplares parados na estante e descubra novas leituras.</p>
 
                     <div class="hero__actions">
-                        <a href="#" class="button button--primary">Cadastrar Gratuitamente</a>
-                        <a href="#" class="button button--secondary">Explorar Livros</a>
+                        <a href="#cadastro" class="button button--primary">Cadastrar Gratuitamente</a>
+                        <a href="#livros"   class="button button--secondary">Explorar Livros</a>
                     </div>
 
                     <div class="hero__benefits">
@@ -69,13 +78,15 @@
                     <div class="hero__shape hero__shape--book"></div>
                 </div>
             </section>
+
+            <!-- ==================== SOBRE ==================== -->
             <section id="sobre" aria-labelledby="sobre-title">
                 <div class="sobre__container">
                     <h2 id="sobre-title" class="sobre__title reveal">Sobre o projeto</h2>
 
-                    <div class="sobre__intro reveal">
-                        <p>O Sebo Literário nasceu da vontade de dar novas vidas a livros usados, conectando leitores, vendedores e trocadores numa comunidade acolhedora e sustentável. Reutilizar livros reduz desperdício, amplia o acesso ao conhecimento e cria histórias compartilhadas entre leitores.</p>
-                    </div>
+                    <p class="sobre__intro reveal">
+                        O Sebo Literário nasceu da vontade de dar novas vidas a livros usados, conectando leitores, vendedores e trocadores numa comunidade acolhedora e sustentável. Reutilizar livros reduz desperdício, amplia o acesso ao conhecimento e cria histórias compartilhadas entre leitores.
+                    </p>
 
                     <div class="sobre__cards reveal" role="list">
                         <article class="sobre__card" role="listitem">
@@ -83,13 +94,11 @@
                             <h4>Missão</h4>
                             <p>Facilitar o acesso à literatura, promover a economia circular de livros e fortalecer laços entre leitores.</p>
                         </article>
-
                         <article class="sobre__card" role="listitem">
                             <div class="card__icon" aria-hidden="true">🔭</div>
                             <h4>Visão</h4>
                             <p>Ser referência nacional em troca e revenda responsável de livros, inspirando a leitura sustentável.</p>
                         </article>
-
                         <article class="sobre__card" role="listitem">
                             <div class="card__icon" aria-hidden="true">🤝</div>
                             <h4>Valores</h4>
@@ -97,9 +106,98 @@
                         </article>
                     </div>
                 </div>
-
             </section>
 
+            <!-- ==================== CADASTRO ==================== -->
+            <section id="cadastro" aria-labelledby="cadastro-title">
+                <div class="cadastro__container">
+                    <div class="section-header">
+                        <span class="section-badge" aria-hidden="true">✨</span>
+                        <div>
+                            <h2 id="cadastro-title">Crie sua conta</h2>
+                            <p class="section-lead">Junte-se à comunidade NovaEstante e comece a comprar, vender e trocar livros hoje mesmo.</p>
+                        </div>
+                    </div>
+
+                    <div class="cadastro__layout">
+                        <div class="cadastro__info">
+                            <h3>Por que fazer parte?</h3>
+                            <p>Ao criar sua conta gratuita, você terá acesso a todos os recursos da plataforma e passará a fazer parte de uma comunidade de leitores apaixonados.</p>
+                            <ul class="cadastro__benefits">
+                                <li>Anuncie seus livros gratuitamente</li>
+                                <li>Solicite trocas com outros leitores</li>
+                                <li>Acompanhe suas negociações em tempo real</li>
+                                <li>Acesse listas de desejos e favoritos</li>
+                                <li>Receba sugestões personalizadas de leitura</li>
+                                <li>Faça parte de uma comunidade sustentável</li>
+                            </ul>
+                        </div>
+
+                        <form class="cadastro__form card" id="register-form" novalidate>
+                            <h3>Cadastro gratuito</h3>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reg-nome">Nome</label>
+                                    <input id="reg-nome" type="text" placeholder="Seu nome" autocomplete="given-name" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="reg-sobrenome">Sobrenome</label>
+                                    <input id="reg-sobrenome" type="text" placeholder="Seu sobrenome" autocomplete="family-name" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-email">E-mail</label>
+                                <input id="reg-email" type="email" placeholder="seu@email.com" autocomplete="email" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-cidade">Cidade</label>
+                                <input id="reg-cidade" type="text" placeholder="Ex.: São Paulo, SP" autocomplete="address-level2" />
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reg-senha">Senha</label>
+                                    <input id="reg-senha" type="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="reg-senha-conf">Confirmar senha</label>
+                                    <input id="reg-senha-conf" type="password" placeholder="Repita a senha" autocomplete="new-password" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-genero">Gênero literário favorito</label>
+                                <select id="reg-genero">
+                                    <option value="" disabled selected>Selecione um gênero</option>
+                                    <option>Romance</option>
+                                    <option>Fantasia</option>
+                                    <option>Ficção Científica</option>
+                                    <option>Suspense</option>
+                                    <option>Terror</option>
+                                    <option>Desenvolvimento Pessoal</option>
+                                    <option>Acadêmicos</option>
+                                    <option>Outros</option>
+                                </select>
+                            </div>
+
+                            <label class="form-terms">
+                                <input type="checkbox" required />
+                                Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> da NovaEstante.
+                            </label>
+
+                            <button class="button button--primary" type="submit">Criar minha conta</button>
+
+                            <div class="cadastro__divider"><span>já tem conta?</span></div>
+                            <p class="cadastro__login"><a href="#">Entrar na NovaEstante →</a></p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== LIVROS ==================== -->
             <section id="livros" aria-labelledby="livros-title">
                 <div class="livros__container">
                     <h2 id="livros-title" class="livros__title">Livros — Histórias ganham novas vidas</h2>
@@ -111,7 +209,7 @@
                         </div>
 
                         <div class="filters" role="toolbar" aria-label="Filtro por gênero">
-                            <button class="chip" data-genre="All">Todos</button>
+                            <button class="chip active" data-genre="All">Todos</button>
                             <button class="chip" data-genre="Romance">Romance</button>
                             <button class="chip" data-genre="Fantasia">Fantasia</button>
                             <button class="chip" data-genre="Ficção Científica">Ficção Científica</button>
@@ -123,16 +221,11 @@
                     </div>
 
                     <div class="catalog" id="catalog" aria-live="polite">
-                        <!-- 8 example cards -->
+
                         <article class="book-card" data-title="O Jardim Secreto" data-author="Frances Hodgson" data-genre="Romance" data-condition="Excelente">
                             <div class="cover" aria-hidden="true">
                                 <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
-                                            <stop offset="0" stop-color="#fbe9f1"/>
-                                            <stop offset="1" stop-color="#f9c5d1"/>
-                                        </linearGradient>
-                                    </defs>
+                                    <defs><linearGradient id="g1" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fbe9f1"/><stop offset="1" stop-color="#f9c5d1"/></linearGradient></defs>
                                     <rect width="100%" height="100%" rx="6" fill="url(#g1)" />
                                     <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
                                 </svg>
@@ -142,24 +235,19 @@
                                 <p class="book__author">Frances Hodgson</p>
                                 <p class="book__info">Romance · Excelente</p>
                                 <div class="book__meta">
+                                    <strong class="price">R$ 29,90</strong>
                                     <div class="actions">
                                         <a href="#" class="text-link buy">Comprar</a>
                                         <a href="#" class="text-link exchange">Solicitar Troca</a>
                                     </div>
-                                    <strong class="price">R$ 29,90</strong>
                                 </div>
                             </div>
                         </article>
 
                         <article class="book-card" data-title="Noite Estelar" data-author="A. N. Silva" data-genre="Fantasia" data-condition="Muito Bom">
-                            <div class="cover">
+                            <div class="cover" aria-hidden="true">
                                 <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
-                                            <stop offset="0" stop-color="#f3eaf9"/>
-                                            <stop offset="1" stop-color="#e3c3f0"/>
-                                        </linearGradient>
-                                    </defs>
+                                    <defs><linearGradient id="g2" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f3eaf9"/><stop offset="1" stop-color="#e3c3f0"/></linearGradient></defs>
                                     <rect width="100%" height="100%" rx="6" fill="url(#g2)" />
                                     <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
                                 </svg>
@@ -169,24 +257,19 @@
                                 <p class="book__author">A. N. Silva</p>
                                 <p class="book__info">Fantasia · Muito Bom</p>
                                 <div class="book__meta">
+                                    <strong class="price">R$ 34,50</strong>
                                     <div class="actions">
                                         <a href="#" class="text-link buy">Comprar</a>
                                         <a href="#" class="text-link exchange">Solicitar Troca</a>
                                     </div>
-                                    <strong class="price">R$ 34,50</strong>
                                 </div>
                             </div>
                         </article>
 
                         <article class="book-card" data-title="Máquinas do Amanhã" data-author="R. Tavares" data-genre="Ficção Científica" data-condition="Bom">
-                            <div class="cover">
+                            <div class="cover" aria-hidden="true">
                                 <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="g3" x1="0" x2="1" y1="0" y2="1">
-                                            <stop offset="0" stop-color="#eef9fb"/>
-                                            <stop offset="1" stop-color="#d3eff4"/>
-                                        </linearGradient>
-                                    </defs>
+                                    <defs><linearGradient id="g3" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#eef9fb"/><stop offset="1" stop-color="#d3eff4"/></linearGradient></defs>
                                     <rect width="100%" height="100%" rx="6" fill="url(#g3)" />
                                     <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
                                 </svg>
@@ -196,24 +279,19 @@
                                 <p class="book__author">R. Tavares</p>
                                 <p class="book__info">Ficção Científica · Bom</p>
                                 <div class="book__meta">
+                                    <strong class="price">R$ 24,00</strong>
                                     <div class="actions">
                                         <a href="#" class="text-link buy">Comprar</a>
                                         <a href="#" class="text-link exchange">Solicitar Troca</a>
                                     </div>
-                                    <strong class="price">R$ 24,00</strong>
                                 </div>
                             </div>
                         </article>
 
                         <article class="book-card" data-title="Segredos do Velho Castelo" data-author="L. Pereira" data-genre="Suspense" data-condition="Regular">
-                            <div class="cover">
+                            <div class="cover" aria-hidden="true">
                                 <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="g4" x1="0" x2="1" y1="0" y2="1">
-                                            <stop offset="0" stop-color="#fff6ea"/>
-                                            <stop offset="1" stop-color="#fbe7d0"/>
-                                        </linearGradient>
-                                    </defs>
+                                    <defs><linearGradient id="g4" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff6ea"/><stop offset="1" stop-color="#fbe7d0"/></linearGradient></defs>
                                     <rect width="100%" height="100%" rx="6" fill="url(#g4)" />
                                     <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
                                 </svg>
@@ -223,24 +301,19 @@
                                 <p class="book__author">L. Pereira</p>
                                 <p class="book__info">Suspense · Regular</p>
                                 <div class="book__meta">
+                                    <strong class="price">R$ 18,00</strong>
                                     <div class="actions">
                                         <a href="#" class="text-link buy">Comprar</a>
                                         <a href="#" class="text-link exchange">Solicitar Troca</a>
                                     </div>
-                                    <strong class="price">R$ 18,00</strong>
                                 </div>
                             </div>
                         </article>
 
                         <article class="book-card" data-title="Sombras e Sussurros" data-author="M. Almeida" data-genre="Terror" data-condition="Muito Bom">
-                            <div class="cover">
+                            <div class="cover" aria-hidden="true">
                                 <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="g5" x1="0" x2="1" y1="0" y2="1">
-                                            <stop offset="0" stop-color="#fff5f6"/>
-                                            <stop offset="1" stop-color="#ffdfe6"/>
-                                        </linearGradient>
-                                    </defs>
+                                    <defs><linearGradient id="g5" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fff5f6"/><stop offset="1" stop-color="#ffdfe6"/></linearGradient></defs>
                                     <rect width="100%" height="100%" rx="6" fill="url(#g5)" />
                                     <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
                                 </svg>
@@ -250,24 +323,19 @@
                                 <p class="book__author">M. Almeida</p>
                                 <p class="book__info">Terror · Muito Bom</p>
                                 <div class="book__meta">
+                                    <strong class="price">R$ 22,50</strong>
                                     <div class="actions">
                                         <a href="#" class="text-link buy">Comprar</a>
                                         <a href="#" class="text-link exchange">Solicitar Troca</a>
                                     </div>
-                                    <strong class="price">R$ 22,50</strong>
                                 </div>
                             </div>
                         </article>
 
                         <article class="book-card" data-title="Hábitos para Viver Melhor" data-author="C. Rodrigues" data-genre="Desenvolvimento Pessoal" data-condition="Excelente">
-                            <div class="cover">
+                            <div class="cover" aria-hidden="true">
                                 <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="g6" x1="0" x2="1" y1="0" y2="1">
-                                            <stop offset="0" stop-color="#f0fbf6"/>
-                                            <stop offset="1" stop-color="#dff3e8"/>
-                                        </linearGradient>
-                                    </defs>
+                                    <defs><linearGradient id="g6" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f0fbf6"/><stop offset="1" stop-color="#dff3e8"/></linearGradient></defs>
                                     <rect width="100%" height="100%" rx="6" fill="url(#g6)" />
                                     <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
                                 </svg>
@@ -277,24 +345,19 @@
                                 <p class="book__author">C. Rodrigues</p>
                                 <p class="book__info">Desenvolvimento Pessoal · Excelente</p>
                                 <div class="book__meta">
+                                    <strong class="price">R$ 39,90</strong>
                                     <div class="actions">
                                         <a href="#" class="text-link buy">Comprar</a>
                                         <a href="#" class="text-link exchange">Solicitar Troca</a>
                                     </div>
-                                    <strong class="price">R$ 39,90</strong>
                                 </div>
                             </div>
                         </article>
 
                         <article class="book-card" data-title="Matemática Essencial" data-author="Prof. A. Nunes" data-genre="Acadêmicos" data-condition="Bom">
-                            <div class="cover">
+                            <div class="cover" aria-hidden="true">
                                 <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="g7" x1="0" x2="1" y1="0" y2="1">
-                                            <stop offset="0" stop-color="#f5f9ff"/>
-                                            <stop offset="1" stop-color="#e6f0ff"/>
-                                        </linearGradient>
-                                    </defs>
+                                    <defs><linearGradient id="g7" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f5f9ff"/><stop offset="1" stop-color="#e6f0ff"/></linearGradient></defs>
                                     <rect width="100%" height="100%" rx="6" fill="url(#g7)" />
                                     <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
                                 </svg>
@@ -304,24 +367,19 @@
                                 <p class="book__author">Prof. A. Nunes</p>
                                 <p class="book__info">Acadêmicos · Bom</p>
                                 <div class="book__meta">
+                                    <strong class="price">R$ 45,00</strong>
                                     <div class="actions">
                                         <a href="#" class="text-link buy">Comprar</a>
                                         <a href="#" class="text-link exchange">Solicitar Troca</a>
                                     </div>
-                                    <strong class="price">R$ 45,00</strong>
                                 </div>
                             </div>
                         </article>
 
                         <article class="book-card" data-title="Rumo às Estrelas" data-author="E. Castro" data-genre="Ficção Científica" data-condition="Excelente">
-                            <div class="cover">
+                            <div class="cover" aria-hidden="true">
                                 <svg width="100%" height="100%" viewBox="0 0 200 280" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                                    <defs>
-                                        <linearGradient id="g8" x1="0" x2="1" y1="0" y2="1">
-                                            <stop offset="0" stop-color="#f0f7ff"/>
-                                            <stop offset="1" stop-color="#d3e9ff"/>
-                                        </linearGradient>
-                                    </defs>
+                                    <defs><linearGradient id="g8" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#f0f7ff"/><stop offset="1" stop-color="#d3e9ff"/></linearGradient></defs>
                                     <rect width="100%" height="100%" rx="6" fill="url(#g8)" />
                                     <text x="50%" y="85%" font-family="Poppins, sans-serif" font-size="16" fill="#6b4d5e" text-anchor="middle">Capa</text>
                                 </svg>
@@ -331,23 +389,24 @@
                                 <p class="book__author">E. Castro</p>
                                 <p class="book__info">Ficção Científica · Excelente</p>
                                 <div class="book__meta">
+                                    <strong class="price">R$ 31,00</strong>
                                     <div class="actions">
                                         <a href="#" class="text-link buy">Comprar</a>
                                         <a href="#" class="text-link exchange">Solicitar Troca</a>
                                     </div>
-                                    <strong class="price">R$ 31,00</strong>
                                 </div>
                             </div>
                         </article>
+
                     </div>
                 </div>
-
             </section>
 
-            <section id="trocas" aria-labelledby="trocas-title" class="section-spacing">
+            <!-- ==================== TROCAS ==================== -->
+            <section id="trocas" aria-labelledby="trocas-title">
                 <div class="trocas__container">
                     <div class="section-header">
-                        <span class="section-badge">🔁</span>
+                        <span class="section-badge" aria-hidden="true">🔁</span>
                         <div>
                             <h2 id="trocas-title">Trocas</h2>
                             <p class="section-lead">Solicitações simuladas mostram como cada troca é acompanhada no NovaEstante.</p>
@@ -381,15 +440,16 @@
                         <div class="trocas__toolbar">
                             <strong>Filtrar por status</strong>
                             <div class="trocas__tabs" role="tablist" aria-label="Filtrar solicitações">
-                                <button class="trocas__tab active" data-status="all" type="button">Todas</button>
-                                <button class="trocas__tab" data-status="Pendente" type="button">Pendentes</button>
-                                <button class="trocas__tab" data-status="Aceita" type="button">Aceitas</button>
-                                <button class="trocas__tab" data-status="Recusada" type="button">Recusadas</button>
-                                <button class="trocas__tab" data-status="Cancelada" type="button">Canceladas</button>
+                                <button class="trocas__tab active" data-status="all"       type="button">Todas</button>
+                                <button class="trocas__tab" data-status="Pendente"         type="button">Pendentes</button>
+                                <button class="trocas__tab" data-status="Aceita"           type="button">Aceitas</button>
+                                <button class="trocas__tab" data-status="Recusada"         type="button">Recusadas</button>
+                                <button class="trocas__tab" data-status="Cancelada"        type="button">Canceladas</button>
                             </div>
                         </div>
 
                         <div class="trocas__cards">
+
                             <article class="troca-card status-pendente" data-status="Pendente">
                                 <div class="troca-card__header">
                                     <span class="troca-card__badge">Pendente</span>
@@ -482,17 +542,17 @@
                                     <button class="button button--secondary troca-action" data-action="nova" type="button">Nova solicitação</button>
                                 </div>
                             </article>
+
                         </div>
                     </div>
                 </div>
             </section>
-        </main>
 
-        <footer class="site-footer">
-            <section id="contato" aria-labelledby="contato-title" class="footer__section">
+            <!-- ==================== CONTATO ==================== -->
+            <section id="contato" aria-labelledby="contato-title">
                 <div class="contact__container">
                     <div class="section-header">
-                        <span class="section-badge">📬</span>
+                        <span class="section-badge" aria-hidden="true">📬</span>
                         <div>
                             <h2 id="contato-title">Fale com a NovaEstante</h2>
                             <p class="section-lead">Entre em contato para dúvidas, cadastro ou sugestões. Estamos aqui para ajudar sua próxima leitura a ganhar novas vidas.</p>
@@ -500,7 +560,7 @@
                     </div>
 
                     <div class="contact__layout">
-                        <div class="contact__info card">
+                        <div class="contact__info">
                             <h3>Precisa falar conosco?</h3>
                             <p>Envie uma mensagem ou use nossos canais de atendimento.</p>
                             <ul class="contact__details">
@@ -509,7 +569,9 @@
                                 <li><strong>Endereço:</strong> Av. das Letras, 1234 - São Paulo, SP</li>
                             </ul>
                         </div>
-                        <form id="contact-form" class="contact__form card">
+
+                        <form id="contact-form" class="contact__form">
+                            <h3>Envie uma mensagem</h3>
                             <label for="contact-name">Nome</label>
                             <input id="contact-name" type="text" placeholder="Seu nome" required />
                             <label for="contact-email">Email</label>
@@ -522,20 +584,55 @@
                 </div>
             </section>
 
-            <div class="footer__divider"></div>
+        </main>
 
-            <div class="footer__wrap">
-                <div class="footer-brand">
-                    <img src="./assets/images/novaestante-logo.svg" alt="NovaEstante" height="48" />
-                    <p class="footer__tagline">Histórias ganham novas vidas.</p>
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="site-footer">
+            <div class="footer__inner">
+                <div class="footer__top">
+                    <div class="footer-brand">
+                        <img src="./assets/images/novaestante-logo.svg" alt="NovaEstante" height="44" class="footer-brand__logo" />
+                        <p class="footer__tagline">Histórias ganham novas vidas.<br>Uma comunidade literária sustentável.</p>
+                    </div>
+
+                    <div class="footer__col">
+                        <h4>Plataforma</h4>
+                        <ul>
+                            <li><a href="#sobre">Sobre o projeto</a></li>
+                            <li><a href="#livros">Catálogo de livros</a></li>
+                            <li><a href="#trocas">Sistema de trocas</a></li>
+                            <li><a href="#cadastro">Criar conta</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#contato">Fale conosco</a></li>
+                            <li><a href="#">Perguntas frequentes</a></li>
+                            <li><a href="#">Como anunciar</a></li>
+                            <li><a href="#">Central de ajuda</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Termos de uso</a></li>
+                            <li><a href="#">Privacidade</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="footer__links">
-                    <a href="#sobre">Sobre</a>
-                    <a href="#livros">Livros</a>
-                    <a href="#trocas">Trocas</a>
-                    <a href="#contato">Contato</a>
+
+                <div class="footer__bottom">
+                    <span>© 2026 NovaEstante. Todos os direitos reservados.</span>
+                    <div class="footer__bottom-links">
+                        <a href="#">Termos</a>
+                        <a href="#">Privacidade</a>
+                        <a href="#contato">Contato</a>
+                    </div>
                 </div>
-                <div class="footer__copy">© 2026 NovaEstante. Todos os direitos reservados.</div>
             </div>
         </footer>
 
