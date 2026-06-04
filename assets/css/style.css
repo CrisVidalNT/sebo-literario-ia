@@ -88,9 +88,9 @@ body{
     display: inline-block;
     margin-bottom: 20px;
     padding: 10px 16px;
-    background: rgba(163,177,138,0.16);
+    background: rgba(212, 84, 122,0.08);
     color: var(--color-primary);
-    border-radius: 999px;
+    border-radius: 10px 0px 20px 0px;
     font-size: 0.95rem;
     letter-spacing: 0.02em;
 }

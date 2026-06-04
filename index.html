@@ -71,6 +71,66 @@
                     <div class="hero__shape hero__shape--book"></div>
                 </div>
             </section>
+            <section id="sobre" aria-labelledby="sobre-title">
+                <div class="sobre__container">
+                    <h2 id="sobre-title" class="sobre__title reveal">Sobre o projeto</h2>
+
+                    <div class="sobre__intro reveal">
+                        <p>O Sebo Literário nasceu da vontade de dar novas vidas a livros usados, conectando leitores, vendedores e trocadores numa comunidade acolhedora e sustentável. Reutilizar livros reduz desperdício, amplia o acesso ao conhecimento e cria histórias compartilhadas entre leitores.</p>
+                    </div>
+
+                    <div class="sobre__cards reveal" role="list">
+                        <article class="sobre__card" role="listitem">
+                            <div class="card__icon" aria-hidden="true">📖</div>
+                            <h4>Missão</h4>
+                            <p>Facilitar o acesso à literatura, promover a economia circular de livros e fortalecer laços entre leitores.</p>
+                        </article>
+
+                        <article class="sobre__card" role="listitem">
+                            <div class="card__icon" aria-hidden="true">🔭</div>
+                            <h4>Visão</h4>
+                            <p>Ser referência nacional em troca e revenda responsável de livros, inspirando a leitura sustentável.</p>
+                        </article>
+
+                        <article class="sobre__card" role="listitem">
+                            <div class="card__icon" aria-hidden="true">🤝</div>
+                            <h4>Valores</h4>
+                            <p>Acolhimento, sustentabilidade, confiança e amor pelos livros.</p>
+                        </article>
+                    </div>
+                </div>
+
+                <style>
+                    #sobre{padding:64px 20px;background:var(--bg-paper,#fff0f5);color:var(--text,#2d1f29)}
+                    .sobre__container{max-width:1100px;margin:0 auto}
+                    .sobre__title{font-size:2rem;margin-bottom:12px;background:linear-gradient(90deg,#f9c5d1,#d4547a);-webkit-background-clip:text;background-clip:text;color:transparent}
+                    .sobre__intro{margin-bottom:20px;font-size:1rem;color:var(--text-secondary,#6b4d5e)}
+
+                    /* Cards side-by-side */
+                    .sobre__cards{display:flex;gap:18px;flex-wrap:wrap;align-items:stretch}
+                    .sobre__card{flex:1 1 220px;min-width:220px;max-width:360px;background:#fff9fb;border:1px solid #f5c6d8;border-radius:12px;padding:20px;box-shadow:0 8px 24px rgba(212,84,122,0.06)}
+                    .card__icon{font-size:28px;margin-bottom:8px}
+
+                    /* Scroll reveal */
+                    .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+                    .reveal.in-view{opacity:1;transform:none}
+
+                    @media(max-width:599px){
+                        .sobre__cards{flex-direction:column}
+                        .sobre__card{max-width:100%}
+                    }
+                </style>
+
+                <script>
+                    (function(){
+                        const io = new IntersectionObserver((entries)=>{
+                            entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target)}})
+                        },{threshold:0.15});
+                        document.querySelectorAll('#sobre .reveal').forEach(el=>io.observe(el));
+                    })();
+                </script>
+            </section>
+
         </main>
 
         <script src="assets/js/main.js"></script>
