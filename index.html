@@ -600,7 +600,77 @@
                 </div>
             </div>
         </footer>
+   
+    <!-- ==================== CHAT WIDGET ==================== -->
+<div class="chat-widget" id="chat-widget" aria-live="polite">
 
-        <script src="assets/js/main.js"></script>
+    <!-- Botão flutuante -->
+    <button
+        class="chat-widget__toggle"
+        id="chat-toggle"
+        aria-label="Abrir chat"
+        aria-expanded="false"
+        aria-controls="chat-window"
+        type="button"
+    >
+        <span class="chat-widget__icon chat-widget__icon--open"  aria-hidden="true">💬</span>
+        <span class="chat-widget__icon chat-widget__icon--close" aria-hidden="true">✕</span>
+    </button>
+
+    <!-- Janela do chat -->
+    <div
+        class="chat-window"
+        id="chat-window"
+        role="dialog"
+        aria-labelledby="chat-window-title"
+        aria-hidden="true"
+    >
+        <header class="chat-window__header">
+            <div class="chat-window__info">
+                <span class="chat-window__avatar" aria-hidden="true">📚</span>
+                <div>
+                    <h2 id="chat-window-title" class="chat-window__title">NovaEstante</h2>
+                    <p class="chat-window__status">Online agora</p>
+                </div>
+            </div>
+            <button
+                class="chat-window__close"
+                id="chat-close"
+                aria-label="Fechar chat"
+                type="button"
+            >✕</button>
+        </header>
+
+        <div class="chat-window__messages" id="chat-messages" role="log" aria-label="Mensagens">
+            <!-- Mensagem de boas-vindas -->
+            <div class="chat-message chat-message--bot">
+                <p>Olá! 👋 Bem-vindo à <strong>NovaEstante</strong>. Como posso ajudar você hoje?</p>
+            </div>
+        </div>
+
+        <form class="chat-window__form" id="chat-form" novalidate>
+            <label for="chat-input" class="visually-hidden">Digite sua mensagem</label>
+            <input
+                id="chat-input"
+                type="text"
+                class="chat-window__input"
+                placeholder="Digite sua mensagem..."
+                autocomplete="off"
+                maxlength="500"
+            />
+            <button class="chat-window__send" type="submit" aria-label="Enviar mensagem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </form>
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="assets/css/chat.css">
+<script src="assets/js/chat.js"></script>
+<script src="assets/js/main.js"></script>
     </body>
 </html>
