@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="assets/css/variables.css">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="stylesheet" href="assets/css/chat.css">
-        <script src="assets/js/chat.js" defer></script>
+        <script type="module" src="assets/js/chat.js"></script>
         <script src="assets/js/main.js" defer></script>
     </head>
     <body>
@@ -212,7 +212,7 @@
                             <button class="chip" data-genre="Ficção Científica">Ficção Científica</button>
                             <button class="chip" data-genre="Suspense">Suspense</button>
                             <button class="chip" data-genre="Terror">Terror</button>
-                            <button class="chip" data-genre="Desenvolvimento Pessoal">Romantasia</button>
+                            <button class="chip" data-genre="Romantasia">Romantasia</button>
                             <button class="chip" data-genre="Acadêmicos">Acadêmicos</button>
                         </div>
                     </div>
@@ -237,14 +237,14 @@
                             </div>
                         </article>
 
-                        <article class="book-card" data-title="Noite Estelar" data-author="A. N. Silva" data-genre="Fantasia" data-condition="Muito Bom">
+                        <article class="book-card" data-title="Devoradores de Estrelas" data-author="Andy Weir" data-genre="Ficção Científica" data-condition="Muito Bom">
                             <div class="cover" aria-hidden="true">
                                 <img src="./assets/images/books/devoradoresdeestrelas.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
                             </div>
                             <div class="book__body">
                                 <h3 class="book__title">Devoradores de Estrelas</h3>
                                 <p class="book__author">Andy Weir</p>
-                                <p class="book__info">Ficção Ciêntifica · Muito Bom</p>
+                                <p class="book__info">Ficção Científica · Muito Bom</p>
                                 <div class="book__meta">
                                     <strong class="price">R$ 34,50</strong>
                                     <div class="actions">
@@ -255,7 +255,7 @@
                             </div>
                         </article>
 
-                        <article class="book-card" data-title="Máquinas do Amanhã" data-author="R. Tavares" data-genre="Ficção Científica" data-condition="Bom">
+                        <article class="book-card" data-title="Uma Dobra no Tempo" data-author="Madeleine L'Engle" data-genre="Fantasia" data-condition="Bom">
                             <div class="cover" aria-hidden="true">
                                 <img src="./assets/images/books/adobradotempo.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
                             </div>
@@ -273,7 +273,7 @@
                             </div>
                         </article>
 
-                        <article class="book-card" data-title="Segredos do Velho Castelo" data-author="L. Pereira" data-genre="Suspense" data-condition="Regular">
+                        <article class="book-card" data-title="Trono de Vidro" data-author="Sarah J. Maas" data-genre="Romantasia" data-condition="Regular">
                             <div class="cover" aria-hidden="true">
                                 <img src="./assets/images/books/tronodevidro.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
                             </div>
@@ -291,7 +291,7 @@
                             </div>
                         </article>
 
-                        <article class="book-card" data-title="Sombras e Sussurros" data-author="M. Almeida" data-genre="Terror" data-condition="Muito Bom">
+                        <article class="book-card" data-title="A Paciente Silenciosa" data-author="Alex Michaelides" data-genre="Suspense" data-condition="Muito Bom">
                             <div class="cover" aria-hidden="true">
                                 <img src="./assets/images/books/apacientesilenciosa.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
                             </div>
@@ -309,7 +309,7 @@
                             </div>
                         </article>
 
-                        <article class="book-card" data-title="Hábitos para Viver Melhor" data-author="C. Rodrigues" data-genre="Desenvolvimento Pessoal" data-condition="Excelente">
+                        <article class="book-card" data-title="O Castelo de Otranto" data-author="Horace Walpole" data-genre="Romance" data-condition="Excelente">
                             <div class="cover" aria-hidden="true">
                                 <img src="./assets/images/books/ocastelodeotranto.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
                             </div>
@@ -327,12 +327,12 @@
                             </div>
                         </article>
 
-                        <article class="book-card" data-title="Matemática Essencial" data-author="Prof. A. Nunes" data-genre="Acadêmicos" data-condition="Bom">
+                        <article class="book-card" data-title="Reactjs" data-author="Prof. Carlos Eduardo" data-genre="Acadêmicos" data-condition="Bom">
                             <div class="cover" aria-hidden="true">
                                 <img src="./assets/images/books/reactjs.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
                             </div>
                             <div class="book__body">
-                                <h3 class="book__title">Reacts</h3>
+                                <h3 class="book__title">Reactjs</h3>
                                 <p class="book__author">Prof. Carlos Eduardo</p>
                                 <p class="book__info">Acadêmicos · Bom</p>
                                 <div class="book__meta">
@@ -345,7 +345,7 @@
                             </div>
                         </article>
 
-                        <article class="book-card" data-title="Rumo às Estrelas" data-author="E. Castro" data-genre="Ficção Científica" data-condition="Excelente">
+                        <article class="book-card" data-title="Binding 13" data-author="Chloe Walsh" data-genre="Romance" data-condition="Excelente">
                             <div class="cover" aria-hidden="true">
                                 <img src="./assets/images/books/b13.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
                             </div>
@@ -604,19 +604,6 @@
     <!-- ==================== CHAT WIDGET ==================== -->
 <div class="chat-widget" id="chat-widget" aria-live="polite">
 
-    <!-- Botão flutuante -->
-    <button
-        class="chat-widget__toggle"
-        id="chat-toggle"
-        aria-label="Abrir chat"
-        aria-expanded="false"
-        aria-controls="chat-window"
-        type="button"
-    >
-        <span class="chat-widget__icon chat-widget__icon--open"  aria-hidden="true">💬</span>
-        <span class="chat-widget__icon chat-widget__icon--close" aria-hidden="true">✕</span>
-    </button>
-
     <!-- Janela do chat -->
     <div
         class="chat-window"
@@ -666,6 +653,19 @@
             </button>
         </form>
     </div>
+
+    <!-- Botão flutuante -->
+    <button
+        class="chat-widget__toggle"
+        id="chat-toggle"
+        aria-label="Abrir chat"
+        aria-expanded="false"
+        aria-controls="chat-window"
+        type="button"
+    >
+        <span class="chat-widget__icon chat-widget__icon--open"  aria-hidden="true">💬</span>
+        <span class="chat-widget__icon chat-widget__icon--close" aria-hidden="true">✕</span>
+    </button>
 
 </div>
 

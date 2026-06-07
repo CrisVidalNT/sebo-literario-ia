@@ -1,3 +1,52 @@
+
+import { GoogleGenerativeAI } from "https://esm.sh/@google/generative-ai";
+
+const SYSTEM_PROMPT = `Você é o assistente virtual da NovaEstante, um sebo literário online.
+Responda APENAS com base nas informações abaixo. Se não souber, diga que não tem essa informação.
+Seja amigável, educado e objetivo. Incentive a leitura.
+
+## SOBRE A NOVAESTANTE
+- Nome: NovaEstante
+- Slogan: "Histórias ganham novas vidas."
+- Missão: Facilitar o acesso à literatura e promover a economia circular de livros.
+- Visão: Ser referência nacional em troca e revenda responsável de livros.
+- Valores: Acolhimento, sustentabilidade, confiança e amor pelos livros.
+
+## CONTATO
+- Email: contato@novaestante.com
+- Telefone: (11) 4002-8922
+- Endereço: Av. das Letras, 1234 - São Paulo, SP
+
+## LIVROS DISPONÍVEIS NO CATÁLOGO
+1. Corte de Asas e Ruínas — Sarah J. Maas | Romantasia | Estado: Excelente | R$ 25,90
+2. Devoradores de Estrelas — Andy Weir | Ficção Científica | Estado: Muito Bom | R$ 34,50
+3. Uma Dobra no Tempo — Madeleine L'Engle | Fantasia | Estado: Bom | R$ 24,00
+4. Trono de Vidro — Sarah J. Maas | Romantasia | Estado: Regular | R$ 18,00
+5. A Paciente Silenciosa — Alex Michaelides | Suspense | Estado: Muito Bom | R$ 22,50
+6. O Castelo de Otranto — Horace Walpole | Romance | Estado: Excelente | R$ 19,90
+7. Reacts — Prof. Carlos Eduardo | Acadêmicos | Estado: Bom | R$ 15,00
+8. Binding 13 — Chloe Walsh | Romance | Estado: Excelente | R$ 31,00
+
+## COMO FUNCIONA A TROCA
+1. Encontre um livro disponível no catálogo.
+2. Envie a solicitação ao proprietário.
+3. Aguarde a resposta do outro usuário.
+4. Combinem os detalhes e realizem a troca.
+
+Regras:
+- Apenas usuários cadastrados podem solicitar trocas.
+- O proprietário pode aceitar, recusar ou aguardar.
+- O solicitante pode cancelar antes da aceitação.
+- Ambos os livros devem estar cadastrados no sistema.
+- A plataforma não intermedia a entrega física.
+
+## CADASTRO
+- Cadastro gratuito.
+- Benefícios: anunciar livros, solicitar trocas, acompanhar negociações, listas de favoritos, sugestões personalizadas.
+
+## ESTADOS DE CONSERVAÇÃO ACEITOS
+Excelente, Muito Bom, Bom, Regular.`;
+
 /* ============================================================
    CHAT WIDGET — NovaEstante
    ============================================================ */
@@ -81,9 +130,22 @@ function botReply(userText) {
     // Exibe indicador de digitação
     appendMessage(createTypingIndicator());
 
-    setTimeout(() => {
+    setTimeout(async() => {
+        
+        const apiKey = localStorage.getItem("API_KEY");
+        const genAI = new GoogleGenerativeAI(apiKey);
+
+        const model = genAI.getGenerativeModel({
+        model: "gemini-2.5-flash"
+        });
+
+        const pergunta = `${SYSTEM_PROMPT}\n\nPergunta do usuário: ${userText}`;
+
+        const result = await model.generateContent(pergunta);
+
         removeTypingIndicator();
-        appendMessage(createMessage(`Olá! "${userText}"`, 'bot'));
+
+        appendMessage(createMessage( result.response.text(), 'bot'));
 
         // Reabilita envio
         input.disabled = false;
