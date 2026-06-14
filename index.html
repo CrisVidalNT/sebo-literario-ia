@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>NovaEstante — Histórias ganham novas vidas</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/variables.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/chat.css">
+        <script type="module" src="assets/js/chat.js"></script>
+        <script src="assets/js/main.js" defer></script>
+    </head>
+    <body>
+
+        <!-- ==================== HEADER ==================== -->
+        <header class="main-header">
+            <div class="main-header__container">
+                <a href="/" class="logo">
+                    <img src="./assets/images/novaestante-logo.svg" alt="NovaEstante" height="52" />
+                </a>
+
+                <nav class="main-nav" aria-label="Menu principal">
+                    <ul class="main-nav__list">
+                        <li class="main-nav__item"><a href="#"        class="main-nav__link">Início</a></li>
+                        <li class="main-nav__item"><a href="#sobre"   class="main-nav__link">Sobre</a></li>
+                        <li class="main-nav__item"><a href="#livros"  class="main-nav__link">Livros</a></li>
+                        <li class="main-nav__item"><a href="#trocas"  class="main-nav__link">Trocas</a></li>
+                        <li class="main-nav__item"><a href="#contato" class="main-nav__link">Contato</a></li>
+                        <li class="main-nav__item"><a href="#cadastro" class="button button--primary" style="padding: 8px 16px; font-size: 0.85rem;">Cadastrar</a></li>
+                    </ul>
+                </nav>
+
+                <button class="main-header__menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+            </div>
+        </header>
+
+        <main>
+
+            <!-- ==================== HERO ==================== -->
+            <section class="hero" aria-labelledby="hero-title">
+                <div class="hero__content">
+                    <span class="hero__badge">📚 Sebo Literário Online</span>
+                    <h1 class="hero__title" id="hero-title">
+                        Compre, Venda e Troque
+                        <strong>Livros Usados</strong>
+                    </h1>
+                    <p class="hero__description">Encontre livros usados em ótimo estado, venda exemplares parados na estante e descubra novas leituras.</p>
+
+                    <div class="hero__actions">
+                        <a href="#cadastro" class="button button--primary">Cadastrar Gratuitamente</a>
+                        <a href="#livros"   class="button button--secondary">Explorar Livros</a>
+                    </div>
+
+                    <div class="hero__benefits">
+                        <article class="benefit-card">
+                            <span class="benefit-card__icon">📚</span>
+                            <p>Milhares de livros disponíveis</p>
+                        </article>
+                        <article class="benefit-card">
+                            <span class="benefit-card__icon">💰</span>
+                            <p>Economia para leitores</p>
+                        </article>
+                        <article class="benefit-card">
+                            <span class="benefit-card__icon">🔄</span>
+                            <p>Sistema de trocas entre usuários</p>
+                        </article>
+                        <article class="benefit-card">
+                            <span class="benefit-card__icon">♻️</span>
+                            <p>Incentivo à sustentabilidade</p>
+                        </article>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- ==================== SOBRE ==================== -->
+            <section id="sobre" aria-labelledby="sobre-title">
+                <div class="sobre__container">
+                    <h2 id="sobre-title" class="sobre__title reveal">Sobre o projeto</h2>
+
+                    <p class="sobre__intro reveal">
+                        O Sebo Literário nasceu da vontade de dar novas vidas a livros usados, conectando leitores, vendedores e trocadores numa comunidade acolhedora e sustentável. Reutilizar livros reduz desperdício, amplia o acesso ao conhecimento e cria histórias compartilhadas entre leitores.
+                    </p>
+
+                    <div class="sobre__cards reveal" role="list">
+                        <article class="sobre__card" role="listitem">
+                            <div class="card__icon" aria-hidden="true">📖</div>
+                            <h4>Missão</h4>
+                            <p>Facilitar o acesso à literatura, promover a economia circular de livros e fortalecer laços entre leitores.</p>
+                        </article>
+                        <article class="sobre__card" role="listitem">
+                            <div class="card__icon" aria-hidden="true">🔭</div>
+                            <h4>Visão</h4>
+                            <p>Ser referência nacional em troca e revenda responsável de livros, inspirando a leitura sustentável.</p>
+                        </article>
+                        <article class="sobre__card" role="listitem">
+                            <div class="card__icon" aria-hidden="true">🤝</div>
+                            <h4>Valores</h4>
+                            <p>Acolhimento, sustentabilidade, confiança e amor pelos livros.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== CADASTRO ==================== -->
+            <section id="cadastro" aria-labelledby="cadastro-title">
+                <div class="cadastro__container">
+                    <div class="section-header">
+                        <span class="section-badge" aria-hidden="true">✨</span>
+                        <div>
+                            <h2 id="cadastro-title">Crie sua conta</h2>
+                            <p class="section-lead">Junte-se à comunidade NovaEstante e comece a comprar, vender e trocar livros hoje mesmo.</p>
+                        </div>
+                    </div>
+
+                    <div class="cadastro__layout">
+                        <div class="cadastro__info">
+                            <h3>Por que fazer parte?</h3>
+                            <p>Ao criar sua conta gratuita, você terá acesso a todos os recursos da plataforma e passará a fazer parte de uma comunidade de leitores apaixonados.</p>
+                            <ul class="cadastro__benefits">
+                                <li>Anuncie seus livros gratuitamente</li>
+                                <li>Solicite trocas com outros leitores</li>
+                                <li>Acompanhe suas negociações em tempo real</li>
+                                <li>Acesse listas de desejos e favoritos</li>
+                                <li>Receba sugestões personalizadas de leitura</li>
+                                <li>Faça parte de uma comunidade sustentável</li>
+                            </ul>
+                        </div>
+
+                        <form class="cadastro__form card" id="register-form" novalidate>
+                            <h3>Cadastro gratuito</h3>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reg-nome">Nome</label>
+                                    <input id="reg-nome" type="text" placeholder="Seu nome" autocomplete="given-name" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="reg-sobrenome">Sobrenome</label>
+                                    <input id="reg-sobrenome" type="text" placeholder="Seu sobrenome" autocomplete="family-name" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-email">E-mail</label>
+                                <input id="reg-email" type="email" placeholder="seu@email.com" autocomplete="email" required />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-cidade">Cidade</label>
+                                <input id="reg-cidade" type="text" placeholder="Ex.: São Paulo, SP" autocomplete="address-level2" />
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="reg-senha">Senha</label>
+                                    <input id="reg-senha" type="password" placeholder="Mínimo 8 caracteres" autocomplete="new-password" required />
+                                </div>
+                                <div class="form-group">
+                                    <label for="reg-senha-conf">Confirmar senha</label>
+                                    <input id="reg-senha-conf" type="password" placeholder="Repita a senha" autocomplete="new-password" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="reg-genero">Gênero literário favorito</label>
+                                <select id="reg-genero">
+                                    <option value="" disabled selected>Selecione um gênero</option>
+                                    <option>Romance</option>
+                                    <option>Fantasia</option>
+                                    <option>Ficção Científica</option>
+                                    <option>Suspense</option>
+                                    <option>Terror</option>
+                                    <option>Desenvolvimento Pessoal</option>
+                                    <option>Acadêmicos</option>
+                                    <option>Outros</option>
+                                </select>
+                            </div>
+
+                            <label class="form-terms">
+                                <input type="checkbox" required />
+                                Li e aceito os <a href="#">Termos de Uso</a> e a <a href="#">Política de Privacidade</a> da NovaEstante.
+                            </label>
+
+                            <button class="button button--primary" type="submit">Criar minha conta</button>
+
+                            <div class="cadastro__divider"><span>já tem conta?</span></div>
+                            <p class="cadastro__login"><a href="#">Entrar na NovaEstante →</a></p>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== LIVROS ==================== -->
+            <section id="livros" aria-labelledby="livros-title">
+                <div class="livros__container">
+                    <h2 id="livros-title" class="livros__title">Livros — Histórias ganham novas vidas</h2>
+
+                    <div class="livros__controls">
+                        <div class="search">
+                            <label for="livros-search" class="visually-hidden">Buscar por título ou autor</label>
+                            <input id="livros-search" type="search" placeholder="Buscar por título ou autor..." />
+                        </div>
+
+                        <div class="filters" role="toolbar" aria-label="Filtro por gênero">
+                            <button class="chip active" data-genre="All">Todos</button>
+                            <button class="chip" data-genre="Romance">Romance</button>
+                            <button class="chip" data-genre="Fantasia">Fantasia</button>
+                            <button class="chip" data-genre="Ficção Científica">Ficção Científica</button>
+                            <button class="chip" data-genre="Suspense">Suspense</button>
+                            <button class="chip" data-genre="Terror">Terror</button>
+                            <button class="chip" data-genre="Romantasia">Romantasia</button>
+                            <button class="chip" data-genre="Acadêmicos">Acadêmicos</button>
+                        </div>
+                    </div>
+
+                    <div class="catalog" id="catalog" aria-live="polite">
+
+                        <article class="book-card" data-title="Corte de Asas e Ruínas" data-author="Sarah J. Maas" data-genre="Romantasia" data-condition="Excelente">
+                            <div class="cover" aria-hidden="true">
+                                    <img src="./assets/images/books/cortedeasaseruinas.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
+                                </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Corte de Asas e Ruínas</h3>
+                                <p class="book__author">Sarah J. Maas</p>
+                                <p class="book__info">Romantasia · Excelente</p>
+                                <div class="book__meta">
+                                    <strong class="price">R$ 25,90</strong>
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Devoradores de Estrelas" data-author="Andy Weir" data-genre="Ficção Científica" data-condition="Muito Bom">
+                            <div class="cover" aria-hidden="true">
+                                <img src="./assets/images/books/devoradoresdeestrelas.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Devoradores de Estrelas</h3>
+                                <p class="book__author">Andy Weir</p>
+                                <p class="book__info">Ficção Científica · Muito Bom</p>
+                                <div class="book__meta">
+                                    <strong class="price">R$ 34,50</strong>
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Uma Dobra no Tempo" data-author="Madeleine L'Engle" data-genre="Fantasia" data-condition="Bom">
+                            <div class="cover" aria-hidden="true">
+                                <img src="./assets/images/books/adobradotempo.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Uma Dobra no Tempo</h3>
+                                <p class="book__author">Madeleine L'Engle</p>
+                                <p class="book__info">Fantasia · Bom</p>
+                                <div class="book__meta">
+                                    <strong class="price">R$ 24,00</strong>
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Trono de Vidro" data-author="Sarah J. Maas" data-genre="Romantasia" data-condition="Regular">
+                            <div class="cover" aria-hidden="true">
+                                <img src="./assets/images/books/tronodevidro.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Trono de Vidro</h3>
+                                <p class="book__author">Sarah J. Maas</p>
+                                <p class="book__info">Romantasia · Regular</p>
+                                <div class="book__meta">
+                                    <strong class="price">R$ 18,00</strong>
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="A Paciente Silenciosa" data-author="Alex Michaelides" data-genre="Suspense" data-condition="Muito Bom">
+                            <div class="cover" aria-hidden="true">
+                                <img src="./assets/images/books/apacientesilenciosa.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">A Paciente Silenciosa</h3>
+                                <p class="book__author">Alex Michaelides</p>
+                                <p class="book__info">Suspense · Muito Bom</p>
+                                <div class="book__meta">
+                                    <strong class="price">R$ 22,50</strong>
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="O Castelo de Otranto" data-author="Horace Walpole" data-genre="Romance" data-condition="Excelente">
+                            <div class="cover" aria-hidden="true">
+                                <img src="./assets/images/books/ocastelodeotranto.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">O Castelo de Otranto</h3>
+                                <p class="book__author">Horace Walpole</p>
+                                <p class="book__info">Romance · Excelente</p>
+                                <div class="book__meta">
+                                    <strong class="price">R$ 19,90</strong>
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Reactjs" data-author="Prof. Carlos Eduardo" data-genre="Acadêmicos" data-condition="Bom">
+                            <div class="cover" aria-hidden="true">
+                                <img src="./assets/images/books/reactjs.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Reactjs</h3>
+                                <p class="book__author">Prof. Carlos Eduardo</p>
+                                <p class="book__info">Acadêmicos · Bom</p>
+                                <div class="book__meta">
+                                    <strong class="price">R$ 15,00</strong>
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="book-card" data-title="Binding 13" data-author="Chloe Walsh" data-genre="Romance" data-condition="Excelente">
+                            <div class="cover" aria-hidden="true">
+                                <img src="./assets/images/books/b13.webp" alt="Capa — Adobran o Tempo" width="100%" height="100%" />
+                            </div>
+                            <div class="book__body">
+                                <h3 class="book__title">Binding 13</h3>
+                                <p class="book__author">Chloe Walsh</p>
+                                <p class="book__info">Romance · Excelente</p>
+                                <div class="book__meta">
+                                    <strong class="price">R$ 31,00</strong>
+                                    <div class="actions">
+                                        <a href="#" class="text-link buy">Comprar</a>
+                                        <a href="#" class="text-link exchange">Solicitar Troca</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== TROCAS ==================== -->
+            <section id="trocas" aria-labelledby="trocas-title">
+                <div class="trocas__container">
+                    <div class="section-header">
+                        <span class="section-badge" aria-hidden="true">🔁</span>
+                        <div>
+                            <h2 id="trocas-title">Trocas</h2>
+                            <p class="section-lead">Solicitações simuladas mostram como cada troca é acompanhada no NovaEstante.</p>
+                        </div>
+                    </div>
+
+                    <div class="trocas__grid">
+                        <div class="trocas__panel-card card">
+                            <h3>Como funciona a troca</h3>
+                            <ol>
+                                <li><strong>Passo 1:</strong> Encontre um livro disponível para troca no catálogo.</li>
+                                <li><strong>Passo 2:</strong> Envie a solicitação ao proprietário.</li>
+                                <li><strong>Passo 3:</strong> Aguarde a resposta do outro usuário.</li>
+                                <li><strong>Passo 4:</strong> Combinem os detalhes e realizem a troca.</li>
+                            </ol>
+                        </div>
+                        <div class="trocas__panel-card card">
+                            <h3>Regras de negociação</h3>
+                            <ul>
+                                <li>Apenas usuários cadastrados podem solicitar trocas.</li>
+                                <li>O proprietário pode aceitar, recusar ou aguardar.</li>
+                                <li>O solicitante pode cancelar antes da aceitação.</li>
+                                <li>Ambos os livros devem estar cadastrados no sistema.</li>
+                                <li>A plataforma não intermedia a entrega física.</li>
+                                <li>Trocas combinadas fora da plataforma são de responsabilidade dos usuários.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="trocas__panel">
+                        <div class="trocas__toolbar">
+                            <strong>Filtrar por status</strong>
+                            <div class="trocas__tabs" role="tablist" aria-label="Filtrar solicitações">
+                                <button class="trocas__tab active" data-status="all"       type="button">Todas</button>
+                                <button class="trocas__tab" data-status="Pendente"         type="button">Pendentes</button>
+                                <button class="trocas__tab" data-status="Aceita"           type="button">Aceitas</button>
+                                <button class="trocas__tab" data-status="Recusada"         type="button">Recusadas</button>
+                                <button class="trocas__tab" data-status="Cancelada"        type="button">Canceladas</button>
+                            </div>
+                        </div>
+
+                        <div class="trocas__cards">
+
+                            <article class="troca-card status-pendente" data-status="Pendente">
+                                <div class="troca-card__header">
+                                    <span class="troca-card__badge">Pendente</span>
+                                    <time datetime="2026-06-03">03 jun 2026</time>
+                                </div>
+                                <div class="troca-card__body">
+                                    <div>
+                                        <p class="troca-card__label">Livro oferecido</p>
+                                        <strong>O Jardim Secreto</strong>
+                                        <p class="troca-card__meta">Frances Hodgson</p>
+                                    </div>
+                                    <div>
+                                        <p class="troca-card__label">Livro desejado</p>
+                                        <strong>Segredos do Velho Castelo</strong>
+                                        <p class="troca-card__meta">L. Pereira</p>
+                                    </div>
+                                    <p class="troca-card__user">Solicitação por <strong>Ana Silva</strong></p>
+                                </div>
+                                <div class="troca-card__actions">
+                                    <button class="button button--secondary troca-action" data-action="aceitar" type="button">Aceitar</button>
+                                    <button class="button button--secondary troca-action" data-action="recusar" type="button">Recusar</button>
+                                </div>
+                            </article>
+
+                            <article class="troca-card status-aceita" data-status="Aceita">
+                                <div class="troca-card__header">
+                                    <span class="troca-card__badge">Aceita</span>
+                                    <time datetime="2026-06-01">01 jun 2026</time>
+                                </div>
+                                <div class="troca-card__body">
+                                    <div>
+                                        <p class="troca-card__label">Livro oferecido</p>
+                                        <strong>Noite Estelar</strong>
+                                        <p class="troca-card__meta">A. N. Silva</p>
+                                    </div>
+                                    <div>
+                                        <p class="troca-card__label">Livro desejado</p>
+                                        <strong>Máquinas do Amanhã</strong>
+                                        <p class="troca-card__meta">R. Tavares</p>
+                                    </div>
+                                    <p class="troca-card__user">Solicitação por <strong>Bruno Costa</strong></p>
+                                </div>
+                                <div class="troca-card__actions">
+                                    <button class="button button--secondary troca-action" data-action="detalhes" type="button">Ver detalhes</button>
+                                </div>
+                            </article>
+
+                            <article class="troca-card status-recusada" data-status="Recusada">
+                                <div class="troca-card__header">
+                                    <span class="troca-card__badge">Recusada</span>
+                                    <time datetime="2026-05-29">29 mai 2026</time>
+                                </div>
+                                <div class="troca-card__body">
+                                    <div>
+                                        <p class="troca-card__label">Livro oferecido</p>
+                                        <strong>Sombras e Sussurros</strong>
+                                        <p class="troca-card__meta">M. Almeida</p>
+                                    </div>
+                                    <div>
+                                        <p class="troca-card__label">Livro desejado</p>
+                                        <strong>Hábitos para Viver Melhor</strong>
+                                        <p class="troca-card__meta">C. Rodrigues</p>
+                                    </div>
+                                    <p class="troca-card__user">Solicitação por <strong>Carla Mendes</strong></p>
+                                </div>
+                                <div class="troca-card__actions">
+                                    <button class="button button--secondary troca-action" data-action="nova" type="button">Nova solicitação</button>
+                                </div>
+                            </article>
+
+                            <article class="troca-card status-cancelada" data-status="Cancelada">
+                                <div class="troca-card__header">
+                                    <span class="troca-card__badge">Cancelada</span>
+                                    <time datetime="2026-05-27">27 mai 2026</time>
+                                </div>
+                                <div class="troca-card__body">
+                                    <div>
+                                        <p class="troca-card__label">Livro oferecido</p>
+                                        <strong>Matemática Essencial</strong>
+                                        <p class="troca-card__meta">Prof. A. Nunes</p>
+                                    </div>
+                                    <div>
+                                        <p class="troca-card__label">Livro desejado</p>
+                                        <strong>Rumo às Estrelas</strong>
+                                        <p class="troca-card__meta">E. Castro</p>
+                                    </div>
+                                    <p class="troca-card__user">Solicitação por <strong>Diego Alves</strong></p>
+                                </div>
+                                <div class="troca-card__actions">
+                                    <button class="button button--secondary troca-action" data-action="nova" type="button">Nova solicitação</button>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================== CONTATO ==================== -->
+            <section id="contato" aria-labelledby="contato-title">
+                <div class="contact__container">
+                    <div class="section-header">
+                        <span class="section-badge" aria-hidden="true">📬</span>
+                        <div>
+                            <h2 id="contato-title">Fale com a NovaEstante</h2>
+                            <p class="section-lead">Entre em contato para dúvidas, cadastro ou sugestões. Estamos aqui para ajudar sua próxima leitura a ganhar novas vidas.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact__layout">
+                        <div class="contact__info">
+                            <h3>Precisa falar conosco?</h3>
+                            <p>Envie uma mensagem ou use nossos canais de atendimento.</p>
+                            <ul class="contact__details">
+                                <li><strong>Email:</strong> contato@novaestante.com</li>
+                                <li><strong>Telefone:</strong> (11) 4002-8922</li>
+                                <li><strong>Endereço:</strong> Av. das Letras, 1234 - São Paulo, SP</li>
+                            </ul>
+                        </div>
+
+                        <form id="contact-form" class="contact__form">
+                            <h3>Envie uma mensagem</h3>
+                            <label for="contact-name">Nome</label>
+                            <input id="contact-name" type="text" placeholder="Seu nome" required />
+                            <label for="contact-email">Email</label>
+                            <input id="contact-email" type="email" placeholder="seu@email.com" required />
+                            <label for="contact-message">Mensagem</label>
+                            <textarea id="contact-message" rows="5" placeholder="Escreva sua mensagem..." required></textarea>
+                            <button class="button button--primary" type="submit">Enviar mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ==================== FOOTER ==================== -->
+        <footer class="site-footer">
+            <div class="footer__inner">
+                <div class="footer__top">
+                    <div class="footer-brand">
+                        <img src="./assets/images/novaestante-logo.svg" alt="NovaEstante" height="44" class="footer-brand__logo" />
+                        <p class="footer__tagline">Histórias ganham novas vidas.<br>Uma comunidade literária sustentável.</p>
+                    </div>
+
+                    <div class="footer__col">
+                        <h4>Plataforma</h4>
+                        <ul>
+                            <li><a href="#sobre">Sobre o projeto</a></li>
+                            <li><a href="#livros">Catálogo de livros</a></li>
+                            <li><a href="#trocas">Sistema de trocas</a></li>
+                            <li><a href="#cadastro">Criar conta</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#contato">Fale conosco</a></li>
+                            <li><a href="#">Perguntas frequentes</a></li>
+                            <li><a href="#">Como anunciar</a></li>
+                            <li><a href="#">Central de ajuda</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Termos de uso</a></li>
+                            <li><a href="#">Privacidade</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer__bottom">
+                    <span>© 2026 NovaEstante. Todos os direitos reservados.</span>
+                    <div class="footer__bottom-links">
+                        <a href="#">Termos</a>
+                        <a href="#">Privacidade</a>
+                        <a href="#contato">Contato</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+   
+    <!-- ==================== CHAT WIDGET ==================== -->
+<div class="chat-widget" id="chat-widget" aria-live="polite">
+
+    <!-- Janela do chat -->
+    <div
+        class="chat-window"
+        id="chat-window"
+        role="dialog"
+        aria-labelledby="chat-window-title"
+        aria-hidden="true"
+    >
+        <header class="chat-window__header">
+            <div class="chat-window__info">
+                <span class="chat-window__avatar" aria-hidden="true">📚</span>
+                <div>
+                    <h2 id="chat-window-title" class="chat-window__title">NovaEstante</h2>
+                    <p class="chat-window__status">Online agora</p>
+                </div>
+            </div>
+            <button
+                class="chat-window__close"
+                id="chat-close"
+                aria-label="Fechar chat"
+                type="button"
+            >✕</button>
+        </header>
+
+        <div class="chat-window__messages" id="chat-messages" role="log" aria-label="Mensagens">
+            <!-- Mensagem de boas-vindas -->
+            <div class="chat-message chat-message--bot">
+                <p>Olá! 👋 Bem-vindo à <strong>NovaEstante</strong>. Como posso ajudar você hoje?</p>
+            </div>
+        </div>
+
+        <form class="chat-window__form" id="chat-form" novalidate>
+            <label for="chat-input" class="visually-hidden">Digite sua mensagem</label>
+            <input
+                id="chat-input"
+                type="text"
+                class="chat-window__input"
+                placeholder="Digite sua mensagem..."
+                autocomplete="off"
+                maxlength="500"
+            />
+            <button class="chat-window__send" type="submit" aria-label="Enviar mensagem">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+            </button>
+        </form>
+    </div>
+
+    <!-- Botão flutuante -->
+    <button
+        class="chat-widget__toggle"
+        id="chat-toggle"
+        aria-label="Abrir chat"
+        aria-expanded="false"
+        aria-controls="chat-window"
+        type="button"
+    >
+        <span class="chat-widget__icon chat-widget__icon--open"  aria-hidden="true">💬</span>
+        <span class="chat-widget__icon chat-widget__icon--close" aria-hidden="true">✕</span>
+    </button>
+
+</div>
+
+
+    </body>
+</html>

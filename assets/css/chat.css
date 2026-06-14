@@ -1,0 +1,337 @@
+/* ============================================================
+   CHAT WIDGET — NovaEstante
+   Depende de variables.css para tokens de cor e tipografia
+   ============================================================ */
+
+/* Contêiner raiz — fixo no canto inferior direito */
+.chat-widget {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+}
+
+/* ============================================================
+   BOTÃO FLUTUANTE
+   ============================================================ */
+.chat-widget__toggle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    background: var(--gradient-primary);
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(212, 84, 122, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    flex-shrink: 0;
+}
+
+.chat-widget__toggle:hover {
+    transform: scale(1.08);
+    box-shadow: 0 6px 28px rgba(212, 84, 122, 0.45);
+}
+
+.chat-widget__toggle:active {
+    transform: scale(0.96);
+}
+
+/* Alterna ícones conforme estado */
+.chat-widget__icon--close {
+    display: none;
+    font-style: normal;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.chat-widget--open .chat-widget__icon--open  { display: none; }
+.chat-widget--open .chat-widget__icon--close { display: inline; }
+
+/* ============================================================
+   JANELA DO CHAT
+   ============================================================ */
+.chat-window {
+    width: 340px;
+    max-height: 480px;
+    background: #fff;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 40px rgba(74, 59, 49, 0.14);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
+    /* Estado fechado */
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.chat-widget--open .chat-window {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+/* ============================================================
+   HEADER DA JANELA
+   ============================================================ */
+.chat-window__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 16px;
+    background: var(--gradient-primary);
+    flex-shrink: 0;
+}
+
+.chat-window__info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-window__avatar {
+    width: 36px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.chat-window__title {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.chat-window__status {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.80);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.chat-window__status::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    background: #a8f0c6;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.chat-window__close {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.80);
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    padding: 4px;
+    border-radius: var(--radius-sm);
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.chat-window__close:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* ============================================================
+   ÁREA DE MENSAGENS
+   ============================================================ */
+.chat-window__messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    scroll-behavior: smooth;
+    background: var(--color-background);
+}
+
+/* Scrollbar discreta */
+.chat-window__messages::-webkit-scrollbar {
+    width: 4px;
+}
+
+.chat-window__messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-window__messages::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: 999px;
+}
+
+/* ============================================================
+   BOLHAS DE MENSAGEM
+   ============================================================ */
+.chat-message {
+    display: flex;
+    max-width: 82%;
+    animation: msg-in 0.22s ease;
+}
+
+@keyframes msg-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.chat-message p {
+    margin: 0;
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    font-size: 0.88rem;
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+/* Mensagem do bot — esquerda */
+.chat-message--bot {
+    align-self: flex-start;
+}
+
+.chat-message--bot p {
+    background: #fff;
+    color: var(--color-text);
+    border: 1px solid var(--color-border);
+    border-bottom-left-radius: var(--radius-sm);
+}
+
+/* Mensagem do usuário — direita */
+.chat-message--user {
+    align-self: flex-end;
+}
+
+.chat-message--user p {
+    background: var(--gradient-primary);
+    color: #fff;
+    border-bottom-right-radius: var(--radius-sm);
+}
+
+/* Indicador de digitação */
+.chat-message--typing p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 16px;
+}
+
+.typing-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--color-secondary);
+    border-radius: 50%;
+    animation: typing-bounce 1.1s infinite ease-in-out;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.18s; }
+.typing-dot:nth-child(3) { animation-delay: 0.36s; }
+
+@keyframes typing-bounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+    30%            { transform: translateY(-5px); opacity: 1; }
+}
+
+/* ============================================================
+   FORMULÁRIO DE ENVIO
+   ============================================================ */
+.chat-window__form {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    border-top: 1px solid var(--color-border);
+    background: #fff;
+    flex-shrink: 0;
+}
+
+.chat-window__input {
+    flex: 1;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 9px 12px;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    color: var(--color-text);
+    background: var(--color-surface);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    min-width: 0;
+}
+
+.chat-window__input::placeholder {
+    color: rgba(107, 77, 94, 0.5);
+}
+
+.chat-window__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(212, 84, 122, 0.10);
+}
+
+.chat-window__send {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    border: none;
+    background: var(--gradient-primary);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.chat-window__send:hover {
+    transform: scale(1.07);
+    box-shadow: 0 3px 12px rgba(212, 84, 122, 0.30);
+}
+
+.chat-window__send:active {
+    transform: scale(0.95);
+}
+
+.chat-window__send:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* ============================================================
+   RESPONSIVO — telas pequenas
+   ============================================================ */
+@media (max-width: 400px) {
+    .chat-widget {
+        bottom: 16px;
+        right: 16px;
+    }
+
+    .chat-window {
+        width: calc(100vw - 32px);
+    }
+}
