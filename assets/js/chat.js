@@ -132,20 +132,42 @@ function botReply(userText) {
 
     setTimeout(async() => {
         
-        const apiKey = localStorage.getItem("API_KEY");
-        const genAI = new GoogleGenerativeAI(apiKey);
+        try {
 
-        const model = genAI.getGenerativeModel({
-        model: "gemini-2.5-flash"
-        });
+            const pergunta =
+                `${SYSTEM_PROMPT}\n\nPergunta do usuário: ${userText}`;
 
-        const pergunta = `${SYSTEM_PROMPT}\n\nPergunta do usuário: ${userText}`;
+            const response = await fetch("/api/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    prompt: pergunta
+                })
+            });
 
-        const result = await model.generateContent(pergunta);
+            const data = await response.json();
 
-        removeTypingIndicator();
+            removeTypingIndicator();
 
-        appendMessage(createMessage( result.response.text(), 'bot'));
+            appendMessage(
+                createMessage(data.response, "bot")
+            );
+
+        } catch (error) {
+
+            removeTypingIndicator();
+
+            appendMessage(
+                createMessage(
+                    "Ocorreu um erro ao consultar a IA.",
+                    "bot"
+                )
+            );
+
+            console.error(error);
+        }
 
         // Reabilita envio
         input.disabled = false;
